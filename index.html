@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="keywords" content="Kamayan, Filipino food, traditional dining, restaurant, reservations">
+    <meta name="author" content="Your Name">
+    <title>Azalan Kamayan Restaurant</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+    <!--poppins-font-family------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--using-Font-Awesome-------------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
+    <!-- Styles -->
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: poppins;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            margin-top: 30px; /* Initial top margin for blending */
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            transition: background-color 0.3s ease, margin-top 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: #015c19;
+            margin-top: 0; /* Remove margin when scrolling */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            
+            color: orange;
+            font-size: 1.4rem;
+        }
+
+        .logo-text p {
+            margin: -2px 0 0 0;
+            font-size: 9px;
+            color: white;
+        }
+
+        /* Center the nav menu */
+        .nav-links {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    transition: color 0.3s;
+    font-size: 1rem;
+    
+        }
+
+        .nav-links ul li a::after {
+            content: '';
+            display: block;
+            height: 2px; /* Height of the underline */
+            background: rgba(248, 202, 123, 0.967); /* Color of the underline */
+            width: 0; /* Start with zero width */
+            position: absolute; /* Position it below the link */
+            left: 0;
+            bottom: -5px; /* Space between link and underline */
+            transition: width 0.3s ease-in-out; /* Smooth transition */
+        }
+        .nav-links ul li a:hover {
+            color: #d2e0c0; /* Change text color on hover */
+        }
+
+        .nav-links ul li a:hover::after {
+            width: 100%; /* Expand line to full text length on hover */
+           
+        }
+        /* Hamburger and X Icons */
+        #menu-icon {
+            font-size: 2rem;
+            padding-left: 20px; /* Adjust padding if needed */
+            cursor: pointer;
+            color: white;
+            position: fixed; /* Make it stay visible */
+            /* Set its position relative to the top */
+            right: 30px; /* Align it to the right edge */
+            z-index: 15; /* Ensure it stays above other elements */
+            transition: margin-left 0.3s;
+        }
+        #menu-icon:hover {
+            transform: scale(1.2); /* Slightly increase size on hover */
+            transition: transform 0.3s ease;
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+           #home{
+            max-height:80vh;
+           }
+            .nav-links ul {
+                padding: 7% 0;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 0 10px 10px 0;
+                text-align: center;
+                background: #1C3720;
+                width: 70%;
+                height: 100vh;
+                gap: 30px;
+                transform: translateX(-100%); /* Initially hidden */
+                transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
+            }
+
+        .nav-links ul li a:hover::after {
+            width: 0; /* Expand line to full text length on hover */
+           
+        }
+            .nav-links.active ul {
+                transform: translateX(0); /* Slide in when active */
+            }
+
+            #menu-icon {
+                display: block;
+            }
+        }
+
+        /* For larger screens, the menu should remain horizontal */
+        @media screen and (min-width: 769px) {
+            .nav-links ul {
+                display: flex;
+                opacity: 1;
+                transform: none;
+            }
+
+            #menu-icon {
+                display: none;
+            }
+            
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            background-size: cover;
+            
+            background-image: url('azalan bg.png');
+            background-position: center;
+            transition: background-image 1s ease-in-out; /* Smooth transition for background */
+        }
+
+        /* Semi-transparent overlay for better text visibility */
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000080; /* Dark overlay for contrast */
+            z-index: 1;
+        }
+
+        .home-content {
+            z-index: 2;
+            padding: 20px;
+           
+        }
+
+        .home-content h1 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: clamp(1.5rem, 4vw, 2.8rem);
+        }
+
+        .home-content p {
+            
+           font-weight: lighter;
+          margin-bottom: -30px;
+           align-items: center;
+            font-size: clamp(0,4rem, 2vw, 0.8rem);
+        }
+        .home-content h4{
+            
+            font-weight:340;
+            margin-bottom: 30px;
+           align-items: center;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+        }
+
+       
+
+        .reserve-btn {
+            background-color: orange;
+            padding: 10px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.939);
+            font-size: 0.7rem;
+            font-weight:700;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .reserve-btn:hover {
+            background-color: darkorange;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="logo-text">
+                <h1>AZALAN</h1>
+                <p>Kamayan restaurant</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#testimonials">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-icon bx bx-menu" id="menu-icon"></div>
+    </nav>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Savor the flavor of the tradition </h1>
+            <h4>Indulge in the rich flavors of Filipino cuisine, expertly grilled to perfection. From succulent meats to savory seafood,<br> every bite is a testament to our culinary heritage. Join us and experience the heart of Roxas City’s dining scene.</h4>
+            
+            <a href="#reservation" class="reserve-btn">Reserve Now</a><br><br>
+            
+            <p>OPERATING HOURS<br>
+                9 AM - 10 PM = Monday toFriday<br>
+                9 AM - 10 PM = Monday toFriday<p>
+        </div>
+    </section>
+ <!--Testimonials------------------->
+ <section id="testimonials">
+    <!--heading--->
+    <div class="testimonial-heading">
+        <span>Customers review</span>
+        <h1>What our client says?</h1>
+    </div>
+    <!--testimonials-box-container------>
+    <div class="testimonial-box-container">
+        <!--BOX-1-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-1.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Touseeq Ijaz</strong>
+                       
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+            </div>
+        </div>
+        <!--BOX-2-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-2.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>J.K Rowling</strong>
+                        
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+            </div>
+        </div>
+        <!--BOX-3-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-3.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Harry Potter</strong>
+                       
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+            </div>
+        </div>
+        <!--BOX-4-------------->
+        <div class="testimonial-box">
+            <!--top------------------------->
+            <div class="box-top">
+                <!--profile----->
+                <div class="profile">
+                    <!--img---->
+                    <div class="profile-img">
+                        <img src="images/c-4.jpg" />
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user">
+                        <strong>Oliva</strong>
+                        
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+     // Toggle mobile menu
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.nav-links');
+let navLinks = document.querySelectorAll('.nav-links ul li a');
+
+// Function to toggle the mobile menu
+menu.onclick = () => {
+    menu.classList.toggle('bx-x'); // Change icon to 'X'
+    navlist.classList.toggle('active'); // Trigger animation
+};
+
+// Hide menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navlist.classList.remove('active'); // Hide the menu
+        menu.classList.remove('bx-x'); // Reset the icon
+    });
+});
+
+// Navbar scroll behavior (optional)
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+// Function to change background image every 5 seconds
+let images = [
+'azalan bg.png',
+'2d.jpg',
+'yum.jpg',
+'out.jpg'
+];
+let currentIndex = 0;
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('home').style.backgroundImage = `url('${images[currentIndex]}')`;
+}
+
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
+    </script>
+
+</body>
+</html>
