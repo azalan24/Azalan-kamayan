@@ -1,0 +1,194 @@
+ /* Footer container */
+ footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2a2a2a;
+    color: rgb(189, 188, 188);
+    margin: 0;
+    padding:0;
+  }
+
+  /* Align footer columns */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap; /* Allow wrapping of columns in small screens */
+  }
+
+  /* Ensure all columns have the same width */
+  .footer-column {
+    flex: 1; /* This ensures each column has the same width */
+    padding: 0 8px; /* Reduced padding to minimize space between columns */
+    margin: 0 4px; /* Reduced margin between columns */
+    box-sizing: border-box; /* Ensure padding and margin do not affect width */
+  }
+
+  .footer-column h4 {
+    margin-bottom: 8px; /* Reduced margin between heading and list */
+    font-size: 1.2em;
+    color: rgb(222, 217, 217);
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 250px; /* Set a maximum width for the ul */
+    width: 100%; /* Ensure it takes up the full width within the column */
+  }
+
+  .footer-column ul li {
+    margin-bottom: 6px; /* Reduced margin between list items */
+  }
+
+  .footer-column ul li a {
+    color: rgb(189, 188, 188);
+    text-decoration: none;
+  }
+
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* 4th Column: Business Logo and Name with Subtitle */
+  .footer-column .logos {
+    display: flex;
+    align-items: center; /* Ensures vertical centering of logo and text */
+    justify-content: center;
+    margin-top: 20px; /* Adjusted for better positioning */
+    flex-direction: column; /* Stack logo below the company name */
+  }
+
+  .footer-column .logos img {
+    width: 100px; /* Slightly larger logo */
+    height: 80px;
+    margin-top: 5px; /* Space between subtitle and logo */
+  }
+
+  .footer-column .logos h4 {
+    margin: 0;
+    color: orange;
+    font-size: 1.5em;
+    text-align: center; /* Ensure the text is centered */
+  }
+
+  .footer-column .logos p {
+    font-size: 0.9em;
+    color: rgb(228, 226, 226);
+    margin-top: 2px;
+    text-align: center; /* Ensure the subtitle is centered */
+  }
+
+  /* Remove extra space between Column 3 and Column 4 */
+  .footer-column:last-child {
+    padding-right: 0;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack columns vertically on small screens */
+      width: 100%; /* Ensure columns take full width */
+      align-items: flex-start; /* Align items to the left */
+    }
+
+    .footer-column {
+      margin-bottom: 10px; /* Reduced margin between columns */
+      padding: 0 8px; /* Reduced padding on smaller screens */
+      text-align: left; /* Align text to the left in each column */
+      width: 100%; /* Ensure column takes full width */
+    }
+
+    .footer-column ul {
+      max-width: 100%; /* Ensure ul takes full width on smaller screens */
+    }
+
+    /* Keep the 4th column centered */
+    .footer-column:nth-child(6) { /* This is the logo column */
+      display: flex;
+      justify-content: center; /* Center the logo and text inside the 4th column */
+      align-items: center;
+      text-align: center; /* Center text inside the 4th column */
+    }
+
+    .footer-column .logos {
+      margin-top: 10px; /* Adjust logo margin on small screens */
+    }
+
+    .footer-column .logos h4,
+    .footer-column .logos p {
+      font-size: 1.2em; /* Slightly larger text on smaller screens */
+    }
+  }
+
+ 
+
+  /* Horizontal line style */
+  hr {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid white;
+  }
+/* Footer Bottom Section */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  flex-direction: column;
+  font-size: 1em;
+  
+}
+
+/* Social Icons Positioned to the Right */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+ align-items: center;
+ 
+}
+
+/* Circular Background for Social Icons */
+.social-icons a {
+  color: white;
+   width: 30px;
+ border: 1px solid white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for social icons */
+.social-icons a:hover {
+    border: none;
+    background-color: #66bb6a; /* Lighter green background */
+color: orange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+
+ 
+
+  /* Social Icons Centered Below on Smaller Screens */
+  .footer-bottom {
+      flex-direction: column;
+      position: relative;
+  }
+
+  .social-icons {
+      position: static;
+      justify-content: center;
+      padding-top: 10px;
+      gap: 15px;
+  }
+}
