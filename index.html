@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
-    <meta name="keywords" content="Kamayan, Filipino food, traditional dining, restaurant, reservations">
+    <meta name="keywords" content="Azalan Kamayan Restaurant,  restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
     <meta name="author" content="Your Name">
     <title>Azalan Kamayan Restaurant</title>
-    <link rel="stylesheet" href="testimonial.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="featured-dishes.css">
+    <link rel="stylesheet" href="rrabout.css">
+    <link rel="stylesheet" href="foot.css">
+    <link rel="stylesheet" href="testimony.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
 
@@ -32,7 +36,7 @@
     
     <!-- Styles -->
     <style>
-         html{
+        html{
             scroll-behavior: smooth;
         }
         /* General Reset */
@@ -141,30 +145,72 @@
             width: 100%; /* Expand line to full text length on hover */
            
         }
-        .search-bar {
-            padding: 5px 10px;
-            font-size: 0.9rem;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            outline: none;
-           
-            width: 150px; /* Adjust width of the search bar */
-            transition: width 0.3s ease;
-            margin-left: 20px;
-        }
-        .search-bar:focus {
-            width: 250px;
-            border-color: #015c19;
-        }
+        /* Container for the search bar */
+.search-bar-container {
+    position: relative;
+    display: inline-block;
+    width: 250px; /* Default width of the container */
+}
 
-        .search-btn {
-            background-color: #ac732a;
-            border: none;
-            padding: 7px 10px;
-            margin-left: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
+/* Default state for search bar (hidden) */
+.search-bar {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 0; /* Initially hidden */
+    opacity: 0; /* Initially invisible */
+    transition: width 0.3s ease, opacity 0.3s ease;
+    padding-right: 30px; /* Space for the search icon */
+}
+
+/* Focus style for the search bar */
+.search-bar:focus {
+    border-color: #015c19;
+}
+
+/* Style for the search button */
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ac732a;
+    position: absolute;
+    right: 10px; /* Right-align the search icon */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* When the search bar is expanded */
+.search-bar.expanded {
+    width: 230px; /* Width when expanded */
+    opacity: 1; /* Make it visible */
+    padding: 5px 10px; /* Adjust padding */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    /* For very small screens, the search bar container is still visible but compact */
+    .search-bar-container {
+        width: 150px; /* Smaller container width */
+    }
+
+    .search-bar {
+        width: 0; /* Keep the input box hidden by default */
+        opacity: 0; /* Keep the input box invisible */
+    }
+
+    /* Expanded state for the search bar on small screens */
+    .search-bar.expanded {
+        width: 80%; /* On small screens, take up 80% of the available width */
+    }
+}
+
+      
+        
        
         /* Hamburger and X Icons */
         #menu-icon {
@@ -184,30 +230,31 @@
         }
 /* Home Section h4 */
 .home-content h4 {
-    font-weight: 340;
-    margin-bottom: 30px;
+    font-weight:lighter;
+    margin-bottom: 60px;
     align-items: center;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    width: 80%; /* Set a specific width */
-    max-width: 800px; /* Optional: limit max width */
+    text-align: center;
+   
+    font-size: clamp(0.6rem, 2vw, 1.5rem);
+  
+    max-width: 950px; /* Optional: limit max width */
     margin: 0 auto; /* Center the element */
 }
 
 .home-content h1 {
-    margin-top: 5px;
-    margin-bottom: 20px;  /* Space added below h1 */
-    font-weight: 700;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-    font-size: clamp(1.5rem, 4vw, 2.8rem);
+   margin-top: -5px;
+    margin-bottom: 30px;  /* Space added below h1 */
+    font-weight: bold;
+    color: #fff;
+   
+  
+    font-size: clamp(2rem, 5vw, 3rem);
 }
         /* Mobile Responsive */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 788px) {
             #home {
-                padding-top: 120px;  /* Increase space on smaller screens */
-            }
-            #home{
-            max-height:80vh;
+                padding-top: 100px;  /* Increase space on smaller screens */
+                max-height:95vh;
            }
             .nav-links ul {
                 padding: 7% 0;
@@ -217,9 +264,9 @@
                 top: 0;
                 left: 0;
                 border-radius: 0 10px 10px 0;
-                text-align: center;
-                background: #1C3720;
-                width: 70%;
+                text-align: left;
+                background:rgb(20, 95, 0);
+                width: 50%;
                 height: 100vh;
                 gap: 30px;
                 transform: translateX(-100%); /* Initially hidden */
@@ -240,7 +287,7 @@
         }
 
         /* For larger screens, the menu should remain horizontal */
-        @media screen and (min-width: 769px) {
+        @media screen and (min-width: 788px) {
             .nav-links ul {
                 display: flex;
                 opacity: 1;
@@ -260,7 +307,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            height: 100vh;
+            height:90vh;
             overflow: hidden;
             text-align: center;
             position: relative;
@@ -269,7 +316,7 @@
             background-image: url('azalan bg.png');
             background-position: center;
             transition: background-image 1s ease-in-out; /* Smooth transition for background */
-            padding-top: 60px;
+            padding-top: 40px;
         }
 
         /* Semi-transparent overlay for better text visibility */
@@ -286,55 +333,51 @@
 
         .home-content {
             z-index: 2;
-            padding: 20px;
+            padding: 10px;
            
         }
 
-        .home-content h1 {
-            margin-top: 40px;
-            margin-bottom: 25px;
-            font-weight: 700;
-            font-size: clamp(1.7rem, 4vw, 2.9rem);
-        }
+       
 
         .home-content p {
             
            font-weight:300;
            margin-top: -20px;
-          margin-bottom: -30px;
+          margin-bottom: -100px;
            align-items: center;
             font-size: clamp(0.3rem, 2vw, 0.6rem);
         }
         .home-content h4{
-            
-            font-weight:340;
+           
+           
             margin-bottom: 30px;
            align-items: center;
-            font-size: clamp(0.7rem, 2vw, 0.9rem);
+            font-size: clamp(1rem, 1.3vw, 1.5rem);
         }
 
        
 
         .reserve-btn {
-            background-color: rgb(12, 125, 3);
-            padding:  13px;
-            border-radius: 5px;
+            display: inline-block;
+            
+            padding: 10px 20px;
+            background-color: #0c922b;
+            color: #fff;
             text-decoration: none;
-            color: rgba(250, 240, 240, 0.939);
             font-size: 0.9rem;
+            margin-bottom: -10px;
             font-weight:6500;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.3s ease;
         }
 
         .reserve-btn:hover {
-            background-color: rgb(50, 110, 58);
+            background-color: rgb(1, 130, 24);
             transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-
-    <nav class="navbar" id="navbar">
+ <nav class="navbar" id="navbar">
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
             <div class="logo-text">
@@ -347,15 +390,19 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#testimonials">About</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="#featured-dishes">Menu</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Reservation</a></li>
                 <li><a href="#">Contact</a></li>
                 <!-- Search bar inside navbar -->
-                <li>
+                <li class="search-bar-container">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <i class="bx bx-search"></i>
+                    </button>
                     <input type="text" placeholder="Search..." class="search-bar">
-                    <button class="search-btn"><i class="bx bx-search"></i></button>
                 </li>
+                
+                
             </ul>
         </div>
 
@@ -373,13 +420,45 @@
                 <p>9 AM to 10 PM - Monday to Friday<br>
                 9 AM to 10 PM - Monday toFriday<p>
         </div>
+        
     </section>
- <!--Testimonials------------------->
- <section id="testimonials">
+
+    <section class="featured-dishes"id="featured-dishes">
+        <div class ="headss">
+        <h2>Our Featured Dishes</h2>
+        <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family, and make lasting memories around the table. Join us at Azalan Kamayan Restaurant for an unforgettable dining experience.</p>
+    </div><div class="dishes-container">
+            <div class="dish">
+                <img src="inasal.jpg" alt="Chicken Inasal">
+                <div class="dish-content">
+                    <h3>Chicken Inasal</h3>
+                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+                </div>
+           
+            </div>
+            <div class="dish">
+                <img src="pakbet.png" alt="Pork Barbeque">
+                <div class="dish-content">
+                    <h3>Pork Barbeque</h3>
+                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="sisigkampan.jpg" alt="Malarn">
+                <div class="dish-content">
+                    <h3>Malarn</h3>
+                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="menu-button">See menu</a>
+    </section>
+     <!--Testimonials------------------->
+   <section id="testimonials">
     <!--heading--->
     <div class="testimonial-heading">
-        <span>Customers review</span>
-        <h1>What our client says?</h1>
+        <h1>Customers review</h1>
+        
     </div>
     <!--testimonials-box-container------>
     <div class="testimonial-box-container">
@@ -410,7 +489,7 @@
             </div>
             <!--Comments---------------------------------------->
             <div class="client-comment">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis?  ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
             </div>
         </div>
         <!--BOX-2-------------->
@@ -493,64 +572,196 @@
                 <div class="reviews">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
                     <i class="far fa-star"></i><!--Empty star-->
                 </div>
             </div>
             <!--Comments---------------------------------------->
             <div class="client-comment">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
             </div>
         </div>
+
     </div>
 </section>
-    <script>
-     // Toggle mobile menu
-let menu = document.querySelector('#menu-icon');
-let navlist = document.querySelector('.nav-links');
-let navLinks = document.querySelectorAll('.nav-links ul li a');
+<footer>
+    <div class="footer-container">
+      <!-- Column 1: Locations -->
+      <div class="footer-column">
+        <h4>Locations</h4>
+        <ul>
+          <li>Pueblo de Panay Township,<br> Roxas City, Capiz, 5800</li>
+          <h4>Email</h4>
+          <li><a href="mailto:info@example.com">info@example.com</a></li>
+        </ul>
+      </div>
 
-// Function to toggle the mobile menu
-menu.onclick = () => {
-    menu.classList.toggle('bx-x'); // Change icon to 'X'
-    navlist.classList.toggle('active'); // Trigger animation
-};
+   
+      <!-- Column 3: Quick Links -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
 
-// Hide menu when a link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navlist.classList.remove('active'); // Hide the menu
-        menu.classList.remove('bx-x'); // Reset the icon
+      <!-- Column 4: For Developers -->
+      <div class="footer-column">
+        <h4> Developers</h4>
+        <ul>
+          <li><a href="#">Redgie-RR Bula</a></li>
+          <li><a href="#">Jane Dela Torre</a></li>
+          <li><a href="#">Christine Leilani Delay</a></li>
+          <li><a href="#">Jevy Farofaldane</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: Open Hours -->
+      <div class="footer-column">
+        <h4>Open Hours</h4>
+        <ul>
+          <li>Monday - Friday: 9:00 AM - 9:00 PM</li>
+          <li>Saturday: 10:00 AM - 10:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+
+      <!-- Column 6: Business Logo and Name with Subtitle -->
+      <div class="footer-column">
+        <div class="logos">
+          <h4>AZALAN</h4>
+          <p>Kamayan Restaurant</p>
+          <img src="logo.png" alt="Logo"> <!-- Replace with your logo URL -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal Line Divider -->
+    <hr>
+  
+
+    <!-- Copyright Notice -->
+  
+
+  <div class="footer-bottom">
+    <div class="copyright">
+        © Copyright 2024, All Rights Reserved by Azalan Kamayan Restaurant
+    </div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://foodpanda.com" target="_blank"><i class="fas fa-utensils"></i></a>
+   
+</div>
+</footer>
+  <script>   // Toggle mobile menu
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.nav-links');
+    let navLinks = document.querySelectorAll('.nav-links ul li a');
+    
+    // Function to toggle the mobile menu
+    menu.onclick = () => {
+        menu.classList.toggle('bx-x'); // Change icon to 'X'
+        navlist.classList.toggle('active'); // Trigger animation
+    };
+    
+    // Hide menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navlist.classList.remove('active'); // Hide the menu
+            menu.classList.remove('bx-x'); // Reset the icon
+        });
     });
-});
-
-// Navbar scroll behavior (optional)
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    
+    // Navbar scroll behavior (optional)
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    // Function to change background image every 5 seconds
+    let images = [
+    'azalan bg.png',
+    '2d.jpg',
+    'ac.jpg',
+    'out.jpg'
+    ];
+    let currentIndex = 0;
+    
+    function changeBackground() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('home').style.backgroundImage = `url('${images[currentIndex]}')`;
     }
-});
-// Function to change background image every 5 seconds
-let images = [
-'azalan bg.png',
-'2d.jpg',
-'yum.jpg',
-'out.jpg'
-];
-let currentIndex = 0;
+    
+    // Change background every 5 seconds
+    setInterval(changeBackground, 5000);
 
-function changeBackground() {
-    currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById('home').style.backgroundImage = `url('${images[currentIndex]}')`;
-}
+    //gallery script
+    const galleryImages = document.querySelectorAll('.gallery-item');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const initialVisibleCount = 6; // Show only the first 6 images initially
 
-// Change background every 5 seconds
-setInterval(changeBackground, 5000);
-    </script>
+    // Initially hide all but the first 6 images
+    for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+        galleryImages[i].style.display = 'none';
+    }
 
+    // Show More functionality
+    let showMore = false;
+    showMoreBtn.addEventListener('click', () => {
+        showMore = !showMore;
+        if (showMore) {
+            // Show all images
+            galleryImages.forEach(item => {
+                item.style.display = 'block';
+            });
+            showMoreBtn.textContent = 'Show Less'; // Change button text
+        } else {
+            // Hide images beyond the first 6
+            for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+                galleryImages[i].style.display = 'none';
+            }
+            showMoreBtn.textContent = 'Show More'; // Revert button text
+        }
+    });
+
+    // Modal functionality for image zoom
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function () {
+            const imgSrc = this.querySelector('img').src;
+            document.getElementById('modalImage').src = imgSrc;
+            document.getElementById('modal').classList.add('show');
+        });
+    });
+
+    // Close modal when the close button is clicked
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('modal').classList.remove('show');
+    });
+
+    // Close modal when clicking outside the image
+    document.getElementById('modal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('modal')) {
+            document.getElementById('modal').classList.remove('show');
+        }
+    });
+    //search bar 
+    function toggleSearch() {
+        var searchBar = document.querySelector('.search-bar');
+        searchBar.classList.toggle('expanded');
+        if (searchBar.classList.contains('expanded')) {
+            searchBar.focus(); // Focus the input field when expanded
+        }
+    }
+    
+    
+        </script> 
 </body>
 </html>
