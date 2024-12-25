@@ -59,7 +59,7 @@
     
     <!-- Styles -->
     <style>
-        html{
+         html{
             scroll-behavior: smooth;
         }
         /* General Reset */
@@ -71,7 +71,7 @@
 
         .navbar {
             display: flex;
-          
+            
             justify-content: space-between;
             align-items: center;
             background-color: transparent;
@@ -99,7 +99,6 @@
     width: 100%;
 }
         .logo-container {
-            max-width: 1200px;
             display: flex;
             align-items: center;
             padding-left: 30px;
@@ -130,7 +129,7 @@
 .navbar.scrolled .logo-container {
     flex-direction: row; /* Keep logo and text in a row */
 margin-left: 2px;
-transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
    
     justify-content:left; /* Center horizontally */
    
@@ -146,6 +145,7 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
 .navbar.scrolled .logo-text h1 {
    
     font-size: 1.5rem;margin-top: -3px;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     
 }
 .navbar.scrolled .logo-text p {
@@ -197,7 +197,7 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
             width: 0; /* Start with zero width */
             position: absolute; /* Position it below the link */
             left: 0;
-           
+            margin-top: 2px;
                  transition: width 0.3s ease-in-out; /* Smooth transition */
         }
         .nav-links ul li a:hover {
@@ -258,7 +258,7 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
 .view-menu-btn {
     background-color: orange; /* Orange background */
     color: white;
-    border-radius: 20px;
+   border-radius: 20px;
     padding: 10px 20px;
     font-size: 1rem;
     border: none; /* Remove border */
@@ -270,14 +270,13 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
 
 /* No hover effect, just a plain button */
 .view-menu-btn:hover {
-    background-color: rgb(223, 145, 0); /* Keep the same color when hovered */
+    background-color: orange; /* Keep the same color when hovered */
     color: white; /* Keep the same text color */
 }
 
  /* Hamburger and X Icons */
  #menu-icon {
     font-size: 1.5rem;
-  
             padding-left: 20px; /* Adjust padding if needed */
             cursor: pointer;
             color: rgb(194, 194, 194);
