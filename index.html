@@ -8,10 +8,11 @@
     <meta name="keywords" content="Azalan Kamayan Restaurant,  restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
     <meta name="author" content="Your Name">
     <title>Azalan Kamayan Restaurant</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="featured-dishes.css">
-    <link rel="stylesheet" href="rrabout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galleryto.css">
     <link rel="stylesheet" href="foot.css">
+
     <link rel="stylesheet" href="testimony.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
@@ -31,6 +32,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--using-Font-Awesome-------------------->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     
@@ -48,11 +51,12 @@
 
         .navbar {
             display: flex;
+          
             justify-content: space-between;
             align-items: center;
             background-color: transparent;
             margin-top: 30px; /* Initial top margin for blending */
-            padding: 10px 20px;
+            padding: 20px 30px;
             position: fixed;
             width: 100%;
             z-index: 10;
@@ -64,37 +68,76 @@
 
         .navbar.scrolled {
             background-color: #015c19;
-           
             margin-top: 0; /* Remove margin when scrolling */
-            box-shadow: 0 4px 10px rgba(85, 85, 85, 0.681); /* Shadow effect when scrolled */
-        
+            box-shadow: 0 4px 5px rgba(0, 40, 20, 0.6); /* Darker shadow with lower opacity */
         }
-
+        
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
         .logo-container {
+            max-width: 1200px;
             display: flex;
             align-items: center;
-            margin-left: 20px;
+            padding-left: 30px;
+            transition: all 0.3s ease; /* Smooth transition for flex-direction and margins */
+
         }
 
         .logo {
-            width: 50px;
-            height: 50px;
+            width: 53px;
+            height: 55px;
             margin-right: 10px;
         }
 
         .logo-text h1 {
             margin: 0;
             
-            color: orange;
+            color: rgb(224, 147, 2);
             font-size: 1.4rem;
         }
 
         .logo-text p {
-            margin: -2px 0 0 0;
-            font-size: 9px;
+            margin: -5px 0 0 0;
+            font-size: 8.5px;
             color: white;
         }
 
+/* When scrolled, reposition the logo text back to the right side of the logo */
+.navbar.scrolled .logo-container {
+    flex-direction: row; /* Keep logo and text in a row */
+margin-left: 2px;
+transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+   
+    justify-content:left; /* Center horizontally */
+   
+}
+
+
+.navbar.scrolled .logo-text {
+    margin-top: 0;
+    
+    transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
+    margin-left: -5px; /* Ensure logo text moves back to the right after scrolling */
+}
+.navbar.scrolled .logo-text h1 {
+   
+    font-size: 1.5rem;margin-top: -3px;
+    
+}
+.navbar.scrolled .logo-text p {
+    font-size: 8.8px;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    
+}
+.navbar.scrolled .logo {
+   width: 60px;
+   height: 60px;
+}
+ 
         /* Center the nav menu */
         .nav-links {
             flex-grow: 1;
@@ -112,7 +155,7 @@
         }
 
         .nav-links ul li {
-            margin: 0 15px;
+            margin: 4px 15px;
             position: relative;
         }
 
@@ -134,18 +177,18 @@
             width: 0; /* Start with zero width */
             position: absolute; /* Position it below the link */
             left: 0;
-            bottom: -5px; /* Space between link and underline */
-            transition: width 0.3s ease-in-out; /* Smooth transition */
+           
+                 transition: width 0.3s ease-in-out; /* Smooth transition */
         }
         .nav-links ul li a:hover {
             color: #d2e0c0; /* Change text color on hover */
         }
 
         .nav-links ul li a:hover::after {
-            width: 100%; /* Expand line to full text length on hover */
+            width: 95%; /* Expand line to full text length on hover */
            
         }
-        /* Container for the search bar */
+         /* Container for the search bar */
 .search-bar-container {
     position: relative;
     display: inline-block;
@@ -179,115 +222,284 @@
     font-size: 1.2rem;
     color: #ac732a;
     position: absolute;
-    right: 10px; /* Right-align the search icon */
+    right: 5px; /* Right-align the search icon */
     top: 50%;
     transform: translateY(-50%);
 }
 
 /* When the search bar is expanded */
 .search-bar.expanded {
-    width: 230px; /* Width when expanded */
+    width: 200px; /* Width when expanded */
     opacity: 1; /* Make it visible */
     padding: 5px 10px; /* Adjust padding */
 }
 
-/* Responsive styling for smaller screens */
-@media (max-width: 600px) {
-    /* For very small screens, the search bar container is still visible but compact */
-    .search-bar-container {
-        width: 150px; /* Smaller container width */
-    }
-
-    .search-bar {
-        width: 0; /* Keep the input box hidden by default */
-        opacity: 0; /* Keep the input box invisible */
-    }
-
-    /* Expanded state for the search bar on small screens */
-    .search-bar.expanded {
-        width: 80%; /* On small screens, take up 80% of the available width */
-    }
+/* Style for the View Menu Button */
+.view-menu-btn {
+    background-color: orange; /* Orange background */
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    transition: none; /* Disable hover transition effects */
+    display: inline-block;
+    text-align: center; /* Center text inside the button */
 }
 
-      
-        
-       
-        /* Hamburger and X Icons */
-        #menu-icon {
-            font-size: 1.8rem;
+/* No hover effect, just a plain button */
+.view-menu-btn:hover {
+    background-color: rgb(223, 145, 0); /* Keep the same color when hovered */
+    color: white; /* Keep the same text color */
+}
+
+ /* Hamburger and X Icons */
+ #menu-icon {
+    font-size: 1.5rem;
+  
             padding-left: 20px; /* Adjust padding if needed */
             cursor: pointer;
-            color: white;
+            color: rgb(194, 194, 194);
             position: fixed; /* Make it stay visible */
             /* Set its position relative to the top */
             right: 30px; /* Align it to the right edge */
             z-index: 15; /* Ensure it stays above other elements */
             transition: margin-left 0.3s;
-        }
-        #menu-icon:hover {
-            transform: scale(1.2); /* Slightly increase size on hover */
-            transition: transform 0.3s ease;
-        }
-/* Home Section h4 */
+}
+#menu-icon:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+}
+ /* Home Section */
+ #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height:100vh;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    
+    background-image: url('azalan bg.png');
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Smooth transition for background */
+    padding-top: 40px;
+}
+ /* Semi-transparent overlay for better text visibility */
+ #home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171a16bc; /* Dark overlay for contrast */
+    z-index: 1;
+}
+#home .background-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+}
+.home-content {
+    z-index: 2;
+    padding: 10px;
+    .home-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* or row, depending on your layout */
+      }
+      
+   
+}
+.home-content p {
+            
+    font-weight:300;
+    margin-top: -20px;
+   margin-bottom: -150px;
+    align-items: center;
+     font-size: clamp(0.3rem, 2vw, 0.6rem);
+ }
+ .home-content h4{
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    line-height: 1.5; /* Adjust line-height for better readability */
+
+   width: 60%;
+     margin-bottom: 30px;
+    align-items: center;
+     font-size: clamp(1rem, 1vw, 1.5rem);
+ }
+
+ /* Home Section h4 */
 .home-content h4 {
+   
     font-weight:lighter;
-    margin-bottom: 60px;
+   
     align-items: center;
     text-align: center;
-   
-    font-size: clamp(0.6rem, 2vw, 1.5rem);
   
-    max-width: 950px; /* Optional: limit max width */
-    margin: 0 auto; /* Center the element */
+   
+  
+   
 }
 
 .home-content h1 {
-   margin-top: -5px;
+
     margin-bottom: 30px;  /* Space added below h1 */
-    font-weight: bold;
+    font-weight:600;
     color: #fff;
-   
+   font-family: Arial, Helvetica, sans-serif;
   
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
 }
-        /* Mobile Responsive */
-        @media screen and (max-width: 788px) {
+ .reserve-btn {
+    display: inline-block;
+    
+    padding: 10px 20px;
+    background-color: #0c922b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: -10px;
+    font-weight:6500;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-btn:hover {
+    background-color: rgb(1, 130, 24);
+    transform: scale(1.1);
+}
+
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 1180px) {
+            /* For very small screens, the search bar container is still visible but compact */
+            .search-bar-container {
+              
+                width: 90%; /* Smaller container width */
+            }
+          
+            
+            .search-bar {
+             
+              width: 87%; /* On small screens, take up 80% of the available width */
+                opacity: 2; /* Keep the input box invisible */
+            }
+        
+            /* Expanded state for the search bar on small screens */
+            .search-bar.expanded {
+                width: 93%; /* On small screens, take up 80% of the available width */
+            }
+            .view-menu-btn{
+                margin-top: 20px;
+            }
+            .logo-container {
+                display: flex;
+                margin-left: -60px;
+                flex-direction: column; /* Stack logo and text vertically */
+                justify-content: center;
+                align-items: center; /* Center both vertically and horizontally */
+                width: 100%;
+            }
+        
+            .logo {
+                width: 70px; /* Adjust logo size for small screens */
+                height: 70px;
+            }
+        
+            .logo-text {
+                font-size:larger;
+                text-align: center; /* Center-align the text */
+                margin-top: 5px; /* Add space between logo and text */
+            }
+            .logo-text h1 {
+              color: rgb(221, 144, 0);
+                font-size: 1.8em;
+            }
+            .logo-text p {
+                color: #dfdfdf;
+                font-size: 0.7em}
+
+            
+            
+        }
+         /* Mobile Responsive */
+         @media screen and (max-width: 1180px) {
             #home {
-                padding-top: 100px;  /* Increase space on smaller screens */
-                max-height:95vh;
-           }
+                max-height:90vh;
+                object-fit: contain;
+           }  
+             .home-content h4{
+                width: 100%;
+             } 
             .nav-links ul {
-                padding: 7% 0;
+                padding: 10% 20px;
                 display: flex;
                 flex-direction: column;
-                position: absolute;
+                position: fixed;
                 top: 0;
+              
                 left: 0;
                 border-radius: 0 10px 10px 0;
                 text-align: left;
-                background:rgb(20, 95, 0);
-                width: 50%;
+                background:rgb(242, 244, 241);
+                width: 65%;
                 height: 100vh;
-                gap: 30px;
+                gap: 10px;
                 transform: translateX(-100%); /* Initially hidden */
                 transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
+            }  #menu-icon {
+                margin: 10px; /* Increase this value to lower the icon */
+                
+            }
+            
+            .nav-links ul li a:hover{
+                color: #faa11c;
             }
 
         .nav-links ul li a:hover::after {
             width: 0; /* Expand line to full text length on hover */
-           
+            color: #a56363;
         }
             .nav-links.active ul {
                 transform: translateX(0); /* Slide in when active */
             }
 
-            #menu-icon {
-                display: block;
+    /* Add a horizontal line below the nav links in smaller screens */
+    /* Style for each nav link item in smaller screens */
+    .nav-links ul li {
+     
+        margin: 0 0 5px 0; /* Remove margin */
+        width: 100%; /* Ensure the list item takes up full width of the nav */
+        border-bottom: 1px solid #a3a3a3; /* Adds a border under each link */
+    }    
+            .nav-links ul li a {
+                color: #333; /* Dark gray color for better contrast on white */
+                font-size: 16px;
+                text-decoration: none; /* Remove underline */
+                transition: color 0.3s ease; /* Smooth transition on hover */
             }
+            /* Subtle horizontal divider between nav links */
+    .nav-links ul li:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light gray line */
+    }
         }
+/* For larger screens, navbar remains at the top */
 
         /* For larger screens, the menu should remain horizontal */
-        @media screen and (min-width: 788px) {
+        @media screen and (min-width: 1180px) {
             .nav-links ul {
                 display: flex;
                 opacity: 1;
@@ -300,81 +512,68 @@
             
         }
 
-        /* Home Section */
-        #home {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            height:90vh;
-            overflow: hidden;
-            text-align: center;
-            position: relative;
-            background-size: cover;
-            
-            background-image: url('azalan bg.png');
-            background-position: center;
-            transition: background-image 1s ease-in-out; /* Smooth transition for background */
-            padding-top: 40px;
+  @media screen and (max-width: 788px) {
+    #home {
+        max-height:100vh;
+        object-fit: contain;
+   } 
+    .logo-container {
+        
+        display: flex;
+        
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 100%; /* Ensure it takes full width *//* Increase this value to lower the logo */   }
+    .logo {
+        width:60px;  /* Smaller logo size for small screens */
+        height: 60px;}
+        .logo-text {
+            font-size:larger;
+            text-align: center; /* Center-align the text */
+            margin-top: 5px; /* Add space between logo and text */
         }
-
-        /* Semi-transparent overlay for better text visibility */
-        #home::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #15131399; /* Dark overlay for contrast */
-            z-index: 1;
+        .logo-text h1 {
+          
+            font-size: 1.5em;
         }
+        .logo-text p {
+            font-size: 0.6em}
 
-        .home-content {
-            z-index: 2;
-            padding: 10px;
-           
-        }
+    }
 
-       
+    /* Scroll Up Button Styles */
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px; /* Position the button 20px from the bottom */
+    right: 20px;  /* Position the button 20px from the right */
+    background-color: #015c19; /* Dark green background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px; /* Adjust the size of the icon */
+    border-radius: 50%; /* Make it round */
+    cursor: pointer;
+    
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+  }
+  /* Hover effect for the button */
+  #scrollUpBtn:hover {
+    background-color: #006400; /* Slightly lighter green on hover */
+  }
+  @media screen and (max-width: 740px) {
+    #home {
+        max-height:80vh;
+        object-fit: contain;
+   } }
 
-        .home-content p {
-            
-           font-weight:300;
-           margin-top: -20px;
-          margin-bottom: -100px;
-           align-items: center;
-            font-size: clamp(0.3rem, 2vw, 0.6rem);
-        }
-        .home-content h4{
-           
-           
-            margin-bottom: 30px;
-           align-items: center;
-            font-size: clamp(1rem, 1.3vw, 1.5rem);
-        }
-
-       
-
-        .reserve-btn {
-            display: inline-block;
-            
-            padding: 10px 20px;
-            background-color: #0c922b;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: -10px;
-            font-weight:6500;
-            transition: background-color 0.3s ease;
-        }
-
-        .reserve-btn:hover {
-            background-color: rgb(1, 130, 24);
-            transform: scale(1.1);
-        }
-    </style>
+   @media screen and (max-width: 700px) {
+    #home {
+        max-height:100vh;
+        object-fit: contain;
+   } }
+</style>
 </head>
 <body>
  <nav class="navbar" id="navbar">
@@ -393,7 +592,7 @@
                 <li><a href="#featured-dishes">Menu</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Reservation</a></li>
-                <li><a href="#">Contact</a></li>
+               
                 <!-- Search bar inside navbar -->
                 <li class="search-bar-container">
                     <button class="search-btn" onclick="toggleSearch()">
@@ -402,6 +601,8 @@
                     <input type="text" placeholder="Search..." class="search-bar">
                 </li>
                 
+<!-- View Menu Button -->
+<button class="view-menu-btn" onclick="window.location.href='#menu'">Contact Us</button>
                 
             </ul>
         </div>
@@ -415,46 +616,107 @@
             <h4>Indulge in the rich flavors of Filipino cuisine, expertly grilled to perfection. From succulent meats to savory seafood, every bite is a testament to our culinary heritage. Join us and experience the heart of Roxas City’s dining scene.</h4>
             
             <a href="#reservation" class="reserve-btn">Reserve Now</a><br><br>
-            
             <h6>OPERATING HOURS</h6>
-                <p>9 AM to 10 PM - Monday to Friday<br>
-                9 AM to 10 PM - Monday toFriday<p>
+                <p>Sunday-Thursday: 10 am-9:00pm<br>
+                Sunday-Thursday: 10 am-9:00pmz<p>
+            
         </div>
         
     </section>
+    <section id="our-gallery">
+        <div class="grid-container">
+        
+          <div>
+            <h2>Our Story and Vision</h2>
+            <h3>Gather, Savor, & Celebrate. Inspired by Heritage, Crafted for You.</h3>
+            <p>
+              At Azalan Kamayan Restaurant, the vision is to create a dining experience that not only honors tradition but
+              also fosters the joy of sharing meals with loved ones, surrounded by authentic flavors and heartfelt hospitality.
+            </p>
+            <p>
+              Azalan Kamayan Restaurant was established in 2019 namely as Cafe Pueblo Restaurant, located in Pueblo de Panay Township, Roxas City, Capiz. It was envisioned and brought to life by Mrs. Hyacinth O. Viterbo, driven by a deep passion for Filipino cuisine and special love for inasal na manok. This flavorful grilled chicken dish has become the heart of the menu, celebrated as the restaurant's signature offering and consistent favorite among guests.
+            </p>
+          </div>
+         
+          <div>
+            <img src="34.jpg" alt="Delicious Filipino dishes">
+          </div>
+        </div>
+    
+        <div class="grid-container" style="margin-top: 40px;">
+       
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+          </div>
+       
+          <div class="watch-section">
+            <div class="icon">D</div>
+            <h3 class="watch-title">Watch and Enjoy!</h3>
+            <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
+          </div>
+        </div>
+      </section>
+    
+      <div class="container">
+        <h1>Our Gallery</h1>
+        <p class="subtitle">Explore our beautiful restaurant and the wonderful moments shared with our guests.</p>
 
-    <section class="featured-dishes"id="featured-dishes">
-        <div class ="headss">
-        <h2>Our Featured Dishes</h2>
-        <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family, and make lasting memories around the table. Join us at Azalan Kamayan Restaurant for an unforgettable dining experience.</p>
-    </div><div class="dishes-container">
-            <div class="dish">
-                <img src="inasal.jpg" alt="Chicken Inasal">
-                <div class="dish-content">
-                    <h3>Chicken Inasal</h3>
-                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
-                </div>
-           
+        <!-- Image Gallery -->
+        <div class="gallery" id="gallery">
+            <!-- Gallery items (only first 6 will be shown initially) -->
+            <div class="gallery-item"><img src="sisigkampan.jpg" alt="Image 1">
+                
             </div>
-            <div class="dish">
-                <img src="pakbet.png" alt="Pork Barbeque">
-                <div class="dish-content">
-                    <h3>Pork Barbeque</h3>
-                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
-                </div>
+            <div class="gallery-item"><img src="inasal.jpg" alt="Image 2">
+              
             </div>
-            <div class="dish">
-                <img src="sisigkampan.jpg" alt="Malarn">
-                <div class="dish-content">
-                    <h3>Malarn</h3>
-                    <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family.</p>
-                </div>
+            <div class="gallery-item"><img src="inasal.jpg" alt="Image 3">
+             
+            </div>
+            <div class="gallery-item"><img src="lomi.jpg" alt="Image 4">
+               
+            </div>
+            <div class="gallery-item"><img src="lomi.jpg" alt="Image 5">
+               
+            </div>
+            <div class="gallery-item"><img src="lomi.jpg" alt="Image 6">
+               
+            </div>
+            <!-- Extra gallery items (hidden initially) -->
+            <div class="gallery-item"><img src="chapsuey.jpg" alt="Image 7">
+               
+            </div>
+            <div class="gallery-item"><img src="chapsuey.jpg" alt="Image 8">
+                
+            </div>
+            <div class="gallery-item"><img src="lomi.jpg" alt="Image 9">
+               
+            </div>
+            <div class="gallery-item"><img src="squid.jpg" alt="Image 10">
+               
+            </div>
+            <div class="gallery-item"><img src="squid.jpg" alt="Image 11">
+                
+            </div>
+            <div class="gallery-item"><img src="squid.jpg" alt="Image 12">
+                
             </div>
         </div>
-        <a href="#" class="menu-button">See menu</a>
-    </section>
-     <!--Testimonials------------------->
-   <section id="testimonials">
+
+        <!-- Button to show more images, only appears after the first 6 -->
+        <button class="show-more-btn" id="showMoreBtn">SEE MORE</button>
+
+        <!-- Modal for image zoom -->
+        <div id="modal" class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+           <!-- Updated modal navigation buttons -->
+<button class="modal-nav-btn modal-prev" id="prevBtn">&#10094;</button> <!-- Left arrow -->
+<button class="modal-nav-btn modal-next" id="nextBtn">&#10095;</button> <!-- Right arrow -->
+ <img id="modalImage" src="" alt="Zoomed Image">
+        </div>
+    </div>
+  <!--Testimonials------------------->
+  <section id="testimonials">
     <!--heading--->
     <div class="testimonial-heading">
         <h1>Customers review</h1>
@@ -489,7 +751,7 @@
             </div>
             <!--Comments---------------------------------------->
             <div class="client-comment">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis?  ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                <p>I’ve never experienced anything like the Kamayan style of dining, and Azalan did it perfectly! The variety of dishes was amazing, and the flavors took me straight back to the Philippines. Definitely a must-try if you’re in the area.</p>
             </div>
         </div>
         <!--BOX-2-------------->
@@ -519,7 +781,7 @@
             </div>
             <!--Comments---------------------------------------->
             <div class="client-comment">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                <p>The atmosphere at Azalan Kamayan is unlike any other. The blend of Filipino culture and modern dining creates such a fun and relaxing vibe. The food was outstanding, with everything from the grilled meats to the fresh seafood cooked to perfection. I’ll be back for sure!</p>
             </div>
         </div>
         <!--BOX-3-------------->
@@ -549,9 +811,10 @@
             </div>
             <!--Comments---------------------------------------->
             <div class="client-comment">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                <p>What a fantastic dining experience! The food was not only delicious but also beautifully presented. It was a great way to experience Filipino cuisine with friends, and the portions were generous. The warm hospitality made it an even more memorable evening.</p>
             </div>
         </div>
+        
         <!--BOX-4-------------->
         <div class="testimonial-box">
             <!--top------------------------->
@@ -579,189 +842,265 @@
             </div>
             <!--Comments---------------------------------------->
             <div class="client-comment">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                <p>I was blown away by the quality of the food and the overall experience at Azalan Kamayan. The mix of textures and flavors was perfect. A great spot for a family gathering or a fun dinner with friends!</p>
             </div>
         </div>
 
     </div>
+    
 </section>
-<footer>
-    <div class="footer-container">
-      <!-- Column 1: Locations -->
-      <div class="footer-column">
-        <h4>Locations</h4>
-        <ul>
-          <li>Pueblo de Panay Township,<br> Roxas City, Capiz, 5800</li>
-          <h4>Email</h4>
-          <li><a href="mailto:info@example.com">info@example.com</a></li>
-        </ul>
-      </div>
 
-   
-      <!-- Column 3: Quick Links -->
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: For Developers -->
-      <div class="footer-column">
-        <h4> Developers</h4>
-        <ul>
-          <li><a href="#">Redgie-RR Bula</a></li>
-          <li><a href="#">Jane Dela Torre</a></li>
-          <li><a href="#">Christine Leilani Delay</a></li>
-          <li><a href="#">Jevy Farofaldane</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 5: Open Hours -->
-      <div class="footer-column">
-        <h4>Open Hours</h4>
-        <ul>
-          <li>Monday - Friday: 9:00 AM - 9:00 PM</li>
-          <li>Saturday: 10:00 AM - 10:00 PM</li>
-          <li>Sunday: Closed</li>
-        </ul>
-      </div>
-
-      <!-- Column 6: Business Logo and Name with Subtitle -->
-      <div class="footer-column">
-        <div class="logos">
-          <h4>AZALAN</h4>
-          <p>Kamayan Restaurant</p>
-          <img src="logo.png" alt="Logo"> <!-- Replace with your logo URL -->
+    <footer>
+        <div class="footer-container">
+          <!-- Column 1: Locations -->
+          <div class="footer-column">
+            <h4>Locations</h4>
+            <ul>
+              <li>Pueblo de Panay Township,<br> Roxas City, Capiz, 5800</li>
+              <h4>Email</h4>
+              <li><a href="mailto:info@example.com">info@example.com</a></li>
+              
+            </ul>
+          </div>
+    
+       
+          <!-- Column 3: Quick Links -->
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+    
+          <!-- Column 4: For Developers -->
+          <div class="footer-column">
+            <h4> Developers</h4>
+            <ul>
+              <li><a href="#">Redgie-RR Bula</a></li>
+              <li><a href="#">Jane Dela Torre</a></li>
+              <li><a href="#">Christine Leilani Delay</a></li>
+              <li><a href="#">Jevy Farofaldane</a></li>
+            </ul>
+          </div>
+    
+          <!-- Column 5: Open Hours -->
+          <div class="footer-column">
+            <h4>Open Hours</h4>
+            <ul>
+              <li>Monday - Friday: 9:00 AM - 9:00 PM</li>
+              <li>Saturday: 10:00 AM - 10:00 PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+    
+          <!-- Column 6: Business Logo and Name with Subtitle -->
+          <div class="footer-column">
+            <div class="logos">
+              
+              <img src="logo.png" alt="Logo"> <!-- Replace with your logo URL -->
+              <h2>AZALAN</h2>
+              <p>Kamayan Restaurant</p>
+            </div>
+          </div>
         </div>
-      </div>
+    
+       
+      
+    
+        <!-- Copyright Notice -->
+      
+    
+      <div class="footer-bottom">
+        <div class="copyright">
+            © Copyright 2024, All Rights Reserved by Azalan Kamayan Restaurant
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://foodpanda.com" target="_blank"><i class="fas fa-utensils"></i></a>
+       
     </div>
+    </footer>
+    <!-- Scroll Up Button -->
+    <button id="scrollUpBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <!-- Horizontal Line Divider -->
-    <hr>
-  
+    <script>   // Toggle mobile menu
+  // Mobile Menu Toggle
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.nav-links');
+let navLinks = document.querySelectorAll('.nav-links ul li a');
 
-    <!-- Copyright Notice -->
-  
+// Function to toggle the mobile menu
+menu.onclick = () => {
+    menu.classList.toggle('bx-x'); // Change icon to 'X'
+    navlist.classList.toggle('active'); // Trigger animation
+};
 
-  <div class="footer-bottom">
-    <div class="copyright">
-        © Copyright 2024, All Rights Reserved by Azalan Kamayan Restaurant
-    </div>
-    <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://foodpanda.com" target="_blank"><i class="fas fa-utensils"></i></a>
-   
-</div>
-</footer>
-  <script>   // Toggle mobile menu
-    let menu = document.querySelector('#menu-icon');
-    let navlist = document.querySelector('.nav-links');
-    let navLinks = document.querySelectorAll('.nav-links ul li a');
-    
-    // Function to toggle the mobile menu
-    menu.onclick = () => {
-        menu.classList.toggle('bx-x'); // Change icon to 'X'
-        navlist.classList.toggle('active'); // Trigger animation
-    };
-    
-    // Hide menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navlist.classList.remove('active'); // Hide the menu
-            menu.classList.remove('bx-x'); // Reset the icon
-        });
+// Hide menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navlist.classList.remove('active'); // Hide the menu
+        menu.classList.remove('bx-x'); // Reset the icon
     });
-    
-    // Navbar scroll behavior (optional)
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    // Function to change background image every 5 seconds
-    let images = [
+});
+
+// Navbar scroll behavior (optional)
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Image Slideshow Background Change
+let images = [
     'azalan bg.png',
+    'sfdfdf.jpg',
     '2d.jpg',
     'ac.jpg',
     'out.jpg'
-    ];
-    let currentIndex = 0;
+];
+let currentIndex = 0;
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
     
-    function changeBackground() {
-        currentIndex = (currentIndex + 1) % images.length;
-        document.getElementById('home').style.backgroundImage = `url('${images[currentIndex]}')`;
-    }
+    // Create a new div element for background fade
+    const fadeDiv = document.createElement('div');
+    fadeDiv.classList.add('background-fade');
+    fadeDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
     
-    // Change background every 5 seconds
-    setInterval(changeBackground, 5000);
+    // Append the fade div to the #home element
+    const homeElement = document.getElementById('home');
+    homeElement.appendChild(fadeDiv);
+    
+    // Trigger fade effect
+    setTimeout(() => {
+        fadeDiv.style.opacity = 1; // Make the new background fully visible
+    }, 100); // Small delay to ensure the background image is set before transitioning
+    
+    // Remove the old background after fade effect is completed
+    setTimeout(() => {
+        homeElement.removeChild(homeElement.querySelector('.background-fade:not([style*="opacity: 1"])'));
+    }, 1500); // After the fade is complete (1.5s)
+}
 
-    //gallery script
-    const galleryImages = document.querySelectorAll('.gallery-item');
-    const showMoreBtn = document.getElementById('showMoreBtn');
-    const initialVisibleCount = 6; // Show only the first 6 images initially
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
 
-    // Initially hide all but the first 6 images
-    for (let i = initialVisibleCount; i < galleryImages.length; i++) {
-        galleryImages[i].style.display = 'none';
+// Initialize first background change
+changeBackground();
+
+// Search Bar Toggle
+function toggleSearch() {
+    var searchBar = document.querySelector('.search-bar');
+    searchBar.classList.toggle('expanded');
+    if (searchBar.classList.contains('expanded')) {
+        searchBar.focus(); // Focus the input field when expanded
     }
+}
 
-    // Show More functionality
-    let showMore = false;
-    showMoreBtn.addEventListener('click', () => {
-        showMore = !showMore;
-        if (showMore) {
-            // Show all images
-            galleryImages.forEach(item => {
-                item.style.display = 'block';
-            });
-            showMoreBtn.textContent = 'Show Less'; // Change button text
-        } else {
-            // Hide images beyond the first 6
-            for (let i = initialVisibleCount; i < galleryImages.length; i++) {
-                galleryImages[i].style.display = 'none';
-            }
-            showMoreBtn.textContent = 'Show More'; // Revert button text
-        }
-    });
+// Scroll-up Button
+const scrollUpBtn = document.getElementById('scrollUpBtn');
 
-    // Modal functionality for image zoom
-    galleryImages.forEach(img => {
-        img.addEventListener('click', function () {
-            const imgSrc = this.querySelector('img').src;
-            document.getElementById('modalImage').src = imgSrc;
-            document.getElementById('modal').classList.add('show');
+// Show the button when scrolling down 100px from the top
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollUpBtn.style.display = 'block'; // Show the button
+    } else {
+        scrollUpBtn.style.display = 'none'; // Hide the button when at the top
+    }
+};
+
+// When the button is clicked, scroll to the top
+scrollUpBtn.onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
+};
+
+// Gallery Modal Code
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const showMoreBtn = document.getElementById('showMoreBtn');
+const initialVisibleCount = 6;
+
+for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+    galleryImages[i].parentElement.style.display = 'none';
+}
+
+let showMore = false;
+showMoreBtn.addEventListener('click', () => {
+    showMore = !showMore;
+    if (showMore) {
+        galleryImages.forEach(item => {
+            item.parentElement.style.display = 'block';
         });
-    });
-
-    // Close modal when the close button is clicked
-    document.getElementById('closeModal').addEventListener('click', () => {
-        document.getElementById('modal').classList.remove('show');
-    });
-
-    // Close modal when clicking outside the image
-    document.getElementById('modal').addEventListener('click', (e) => {
-        if (e.target === document.getElementById('modal')) {
-            document.getElementById('modal').classList.remove('show');
+        showMoreBtn.textContent = 'SEE LESS';
+    } else {
+        for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+            galleryImages[i].parentElement.style.display = 'none';
         }
-    });
-    //search bar 
-    function toggleSearch() {
-        var searchBar = document.querySelector('.search-bar');
-        searchBar.classList.toggle('expanded');
-        if (searchBar.classList.contains('expanded')) {
-            searchBar.focus(); // Focus the input field when expanded
+        showMoreBtn.textContent = 'SEE MORE';
+    }
+});
+
+let currentIndexModal = 0;
+
+function openModal(index) {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = galleryImages[index].src;
+    modal.classList.add('show');
+    currentIndexModal = index;
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.remove('show');
+}
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('modal')) {
+        closeModal();
+    }
+});
+
+galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => openModal(index));
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndexModal > 0) {
+        openModal(currentIndexModal - 1);
+    }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndexModal < galleryImages.length - 1) {
+        openModal(currentIndexModal + 1);
+    }
+});
+
+// Keyboard navigation (Arrow keys)
+document.addEventListener('keydown', (event) => {
+    if (document.getElementById('modal').classList.contains('show')) { // Only listen if modal is open
+        if (event.key === 'ArrowLeft') { // Left arrow key for previous
+            if (currentIndexModal > 0) {
+                openModal(currentIndexModal - 1);
+            }
+        } else if (event.key === 'ArrowRight') { // Right arrow key for next
+            if (currentIndexModal < galleryImages.length - 1) {
+                openModal(currentIndexModal + 1);
+            }
         }
     }
-    
-    
+});
+
         </script> 
 </body>
 </html>
