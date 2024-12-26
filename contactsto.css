@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.uppername {
+    text-align: center;
+    padding: 3rem;
+    background-color: antiquewhite;
+   ;
+}
+
+.uppername h1 {
+    font-size: 1.2rem;
+    color: #6a6a6a;
+}
+
+
+.banner {
+    background-color: #ff8400;
+    padding: 2rem;
+    color: white;
+    
+    /* Center the banner horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ensure that it doesn't exceed the max-width */
+    max-width: 1200px;
+    
+    /* Center the banner within its parent container */
+    margin: 0 auto;
+}
+
+
+.banner h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 2rem;
+    padding: 2rem;
+     box-sizing: border-box; /* Ensures padding does not affect width/height */
+}
+
+
+
+.form-container,
+.info-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-container h3,
+.info-container h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group input,
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+
+
+
+textarea {
+    height: 100px;
+}
+
+.send-button {
+    padding: 0.75rem;
+    background-color:   #0c922b;
+    color: white;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.send-button:hover {
+    background-color:   #089027;
+}
+
+.info-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.info-container h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #6a6a6a;
+    
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.info-container .top,
+.info-container .middle,
+.info-container .bottom {
+    margin-bottom: 1rem;
+}
+
+.info-container p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.info-container strong {
+    color: #333;
+}
+@media (max-width: 768px) {
+    .contact-container {
+       
+        flex-direction: column; /* Stack the form and info containers */
+        gap: 1.5rem; /* Reduce the gap between the stacked elements */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+   
+    .info-container {
+        width: 100%; /* Ensure each container takes full width on small screens */
+        max-width: none; /* Remove max-width to allow full-width layout */
+    }
+    .form-container {
+        width: 95%; /* Ensure each container takes full width on small screens */
+        max-width: none; /* Remove max-width to allow full-width layout */
+    }
+}
