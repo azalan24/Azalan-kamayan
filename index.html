@@ -2,35 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-<!-- Basic Meta Tags -->
-<meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
-<meta name="keywords" content="Azalan Kamayan Restaurant, restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
-<meta name="author" content="Your Name">
-
-<!-- Open Graph Tags for Facebook -->
-<meta property="og:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
-<meta property="og:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
-<meta property="og:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
-<meta property="og:url" content="https://azalankamayan.site/">
-<meta property="og:type" content="website">
-
-<!-- Optional but recommended Open Graph Tags -->
-<meta property="og:site_name" content="Azalan Kamayan Restaurant">
-<meta property="og:locale" content="en_US">
-
-<!-- Twitter Card Meta Tags (optional but helpful for Twitter sharing) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
-<meta name="twitter:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
-<meta name="twitter:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Basic Meta Tags -->
+    <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="keywords" content="Azalan Kamayan Restaurant, restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Tags for Facebook -->
+    <meta property="og:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta property="og:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta property="og:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    <meta property="og:url" content="https://azalankamayan.site/">
+    <meta property="og:type" content="website">
+    
+    <!-- Optional but recommended Open Graph Tags -->
+    <meta property="og:site_name" content="Azalan Kamayan Restaurant">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags (optional but helpful for Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="twitter:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta name="twitter:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    
     <title>Azalan Kamayan Restaurant</title>
     <link rel="stylesheet" href="featured-dishes.css">
     <link rel="stylesheet" href="aboutto.css">
     <link rel="stylesheet" href="galleryto.css">
+    <link rel="stylesheet" href="contactsto.css">
     <link rel="stylesheet" href="foot.css">
 
     <link rel="stylesheet" href="testimony.css">
@@ -59,7 +60,7 @@
     
     <!-- Styles -->
     <style>
-         html{
+        html{
             scroll-behavior: smooth;
         }
         /* General Reset */
@@ -71,7 +72,7 @@
 
         .navbar {
             display: flex;
-            
+          
             justify-content: space-between;
             align-items: center;
             background-color: transparent;
@@ -99,6 +100,7 @@
     width: 100%;
 }
         .logo-container {
+            max-width: 1200px;
             display: flex;
             align-items: center;
             padding-left: 30px;
@@ -129,7 +131,7 @@
 .navbar.scrolled .logo-container {
     flex-direction: row; /* Keep logo and text in a row */
 margin-left: 2px;
-transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
+transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
    
     justify-content:left; /* Center horizontally */
    
@@ -145,7 +147,6 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
 .navbar.scrolled .logo-text h1 {
    
     font-size: 1.5rem;margin-top: -3px;
-    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     
 }
 .navbar.scrolled .logo-text p {
@@ -197,7 +198,7 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
             width: 0; /* Start with zero width */
             position: absolute; /* Position it below the link */
             left: 0;
-            margin-top: 2px;
+           
                  transition: width 0.3s ease-in-out; /* Smooth transition */
         }
         .nav-links ul li a:hover {
@@ -258,7 +259,7 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
 .view-menu-btn {
     background-color: orange; /* Orange background */
     color: white;
-   border-radius: 20px;
+    border-radius: 20px;
     padding: 10px 20px;
     font-size: 1rem;
     border: none; /* Remove border */
@@ -270,13 +271,14 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
 
 /* No hover effect, just a plain button */
 .view-menu-btn:hover {
-    background-color: orange; /* Keep the same color when hovered */
+    background-color: rgb(223, 145, 0); /* Keep the same color when hovered */
     color: white; /* Keep the same text color */
 }
 
  /* Hamburger and X Icons */
  #menu-icon {
     font-size: 1.5rem;
+  
             padding-left: 20px; /* Adjust padding if needed */
             cursor: pointer;
             color: rgb(194, 194, 194);
@@ -858,6 +860,52 @@ transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
     </div>
     
 </section>
+<section id ="Contacts">
+    <div class = "uppername">
+    <h1>Contact Us</h1>
+    <div class="banner">
+        <h2>Let’s Make Something Great Together</h2>
+    </div>
+</div> 
+
+<main>
+    <section class="contact-container">
+        <div class="form-container">
+            <h3>Send us a message!</h3>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Firstname" >
+                    <input type="text" placeholder="Lastname" >
+                </div>
+                
+                    <input type="email" placeholder="Email" >
+                    <textarea placeholder="Message" ></textarea>
+                    <button type="submit" class="send-button">Send Message</button>
+
+               
+            </form>
+        </div>
+        <div class="info-container">
+            <h3>Dine with us and savor the flavor of tradition</h3>
+            <div class="top">
+                <p><strong>Contact Information</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat nulla.</p>
+            </div>
+            <div class="middle">
+                <p><strong>Address:</strong> Pueblo de Panay Township</p>
+                <p><strong>Contact Number:</strong> 098253925759</p>
+                <p><strong>Email:</strong> azalankamayan@gmail.com</p>
+            </div>
+            <div class="bottom">
+                <p><strong>Opening Hours:</strong></p>
+                <p>Sunday–Thursday: 10 am–9:00 pm</p>
+                <p>Friday and Saturday: 10 am–10:00 pm</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+</section>
 
     <footer>
         <div class="footer-container">
@@ -1113,4 +1161,3 @@ document.addEventListener('keydown', (event) => {
         </script> 
 </body>
 </html>
-
