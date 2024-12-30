@@ -730,7 +730,7 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
   <section id="testimonials">
     <!--heading--->
     <div class="testimonial-heading">
-        <h1>Customers review</h1>
+        <h1>What Do Our Customers Say?</h1>
         
     </div>
     <!--testimonials-box-container------>
@@ -872,18 +872,24 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     <section class="contact-container">
         <div class="form-container">
             <h3>Send us a message!</h3>
-            <form>
-                <div class="input-group">
-                    <input type="text" placeholder="Firstname" >
-                    <input type="text" placeholder="Lastname" >
-                </div>
-                
-                    <input type="email" placeholder="Email" >
-                    <textarea placeholder="Message" ></textarea>
-                    <button type="submit" class="send-button">Send Message</button>
+            <form name="contact" method="POST" data-netlify="true">
+                <!-- Hidden fields -->
+                <input type="hidden" name="form-name" value="contact">
+                <input type="hidden" name="_next" value="https://azalankamayan.site/thankyou.html">
 
-               
+            
+                <div class="input-group">
+                    <input type="text" name="firstname" placeholder="Firstname" required>
+                    <input type="text" name="lastname" placeholder="Lastname" required>
+                </div>
+            
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                
+                <button type="submit" class="send-button">Send Message</button>
             </form>
+            
+            
         </div>
         <div class="info-container">
             <h3>Dine with us and savor the flavor of tradition</h3>
