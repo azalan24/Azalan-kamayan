@@ -1,0 +1,491 @@
+
+
+        html{
+            scroll-behavior: smooth;
+        }
+        /* General Reset */
+        body {
+            margin: 0;
+            
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            font-family: poppins;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            background-color:#015c19;
+            margin-top: 0; /* Initial top margin for blending */
+            padding: 20px 30px;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            transition: background-color 0.3s ease, margin-top 0.3s ease;
+        }
+
+ .navbar a{
+    text-decoration: none;
+ }
+
+
+        .navbar.scrolled {
+            background-color: #015c19;
+            margin-top: 0; /* Remove margin when scrolling */
+            box-shadow: 0 4px 5px rgba(0, 40, 20, 0.6); /* Darker shadow with lower opacity */
+        }
+        
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+        .logo-container {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            transition: all 0.3s ease; /* Smooth transition for flex-direction and margins */
+
+        }
+
+        .logo {
+            width: 53px;
+            height: 55px;
+            margin-right: 10px;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            
+            color: rgb(224, 147, 2);
+            font-size: 1.4rem;
+        }
+
+        .logo-text p {
+            margin: -5px 0 0 0;
+            font-size: 8.5px;
+            color: white;
+        }
+
+/* When scrolled, reposition the logo text back to the right side of the logo */
+.navbar.scrolled .logo-container {
+    flex-direction: row; /* Keep logo and text in a row */
+margin-left: 2px;
+transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+   
+    justify-content:left; /* Center horizontally */
+   
+}
+
+
+.navbar.scrolled .logo-text {
+    margin-top: 0;
+    
+    transition: margin-left 0.5s ease; /* Smooth transition for margin-left */
+    margin-left: -5px; /* Ensure logo text moves back to the right after scrolling */
+}
+.navbar.scrolled .logo-text h1 {
+   
+    font-size: 1.5rem;margin-top: -3px;
+    
+}
+.navbar.scrolled .logo-text p {
+    font-size: 8.8px;
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    
+}
+.navbar.scrolled .logo {
+   width: 60px;
+   height: 60px;
+}
+ 
+        /* Center the nav menu */
+        .nav-links {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links ul li {
+            margin: 4px 15px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    transition: color 0.3s;
+    font-size: 1rem;
+    
+        }
+
+        .nav-links ul li a::after {
+            content: '';
+            display: block;
+            height: 2px; /* Height of the underline */
+            background: rgba(248, 202, 123, 0.967); /* Color of the underline */
+            width: 0; /* Start with zero width */
+            position: absolute; /* Position it below the link */
+            left: 0;
+           
+                 transition: width 0.3s ease-in-out; /* Smooth transition */
+        }
+        .nav-links ul li a:hover {
+            color: #d2e0c0; /* Change text color on hover */
+        }
+
+        .nav-links ul li a:hover::after {
+            width: 95%; /* Expand line to full text length on hover */
+           
+        }
+         /* Container for the search bar */
+.search-bar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 250px; /* Default width of the container */
+}
+
+/* Default state for search bar (hidden) */
+.search-bar {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 0; /* Initially hidden */
+    opacity: 0; /* Initially invisible */
+    transition: width 0.3s ease, opacity 0.3s ease;
+    padding-right: 30px; /* Space for the search icon */
+}
+
+/* Focus style for the search bar */
+.search-bar:focus {
+    border-color: #015c19;
+}
+
+/* Style for the search button */
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ac732a;
+    position: absolute;
+    right: 5px; /* Right-align the search icon */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* When the search bar is expanded */
+.search-bar.expanded {
+    width: 200px; /* Width when expanded */
+    opacity: 1; /* Make it visible */
+    padding: 5px 10px; /* Adjust padding */
+}
+
+/* Style for the View Menu Button */
+.view-menu-btn {
+    background-color: orange; /* Orange background */
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    transition: none; /* Disable hover transition effects */
+    display: inline-block;
+    text-align: center; /* Center text inside the button */
+}
+
+/* No hover effect, just a plain button */
+.view-menu-btn:hover {
+    background-color: rgb(223, 145, 0); /* Keep the same color when hovered */
+    color: white; /* Keep the same text color */
+}
+
+ /* Hamburger and X Icons */
+ #menu-icon {
+    font-size: 1.5rem;
+  
+            padding-left: 20px; /* Adjust padding if needed */
+            cursor: pointer;
+            color: rgb(194, 194, 194);
+            position: fixed; /* Make it stay visible */
+            /* Set its position relative to the top */
+            right: 30px; /* Align it to the right edge */
+            z-index: 15; /* Ensure it stays above other elements */
+            transition: margin-left 0.3s;
+}
+#menu-icon:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+}
+ /* Home Section */
+ #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height:100vh;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    
+    background-image: url('azalan bg.png');
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Smooth transition for background */
+    padding-top: 40px;
+}
+ /* Semi-transparent overlay for better text visibility */
+ #home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171a16bc; /* Dark overlay for contrast */
+    z-index: 1;
+}
+#home .background-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+}
+.home-content {
+    z-index: 2;
+    padding: 10px;
+    .home-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* or row, depending on your layout */
+      }
+      
+   
+}
+.home-content p {
+            
+    font-weight:300;
+    margin-top: -20px;
+   margin-bottom: -150px;
+    align-items: center;
+     font-size: clamp(0.3rem, 2vw, 0.6rem);
+ }
+ .home-content h4{
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    line-height: 1.5; /* Adjust line-height for better readability */
+
+   width: 60%;
+     margin-bottom: 30px;
+    align-items: center;
+     font-size: clamp(1rem, 1vw, 1.5rem);
+ }
+
+ /* Home Section h4 */
+.home-content h4 {
+   
+    font-weight:lighter;
+   
+    align-items: center;
+    text-align: center;
+  
+   
+  
+   
+}
+
+.home-content h1 {
+
+    margin-bottom: 30px;  /* Space added below h1 */
+    font-weight:600;
+    color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+  
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+ .reserve-btn {
+    display: inline-block;
+    
+    padding: 10px 20px;
+    background-color: #0c922b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: -10px;
+    font-weight:6500;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-btn:hover {
+    background-color: rgb(1, 130, 24);
+    transform: scale(1.1);
+}
+
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 1180px) {
+            /* For very small screens, the search bar container is still visible but compact */
+            .search-bar-container {
+              
+                width: 90%; /* Smaller container width */
+            }
+          
+            
+            .search-bar {
+             
+              width: 87%; /* On small screens, take up 80% of the available width */
+                opacity: 2; /* Keep the input box invisible */
+            }
+        
+            /* Expanded state for the search bar on small screens */
+            .search-bar.expanded {
+                width: 93%; /* On small screens, take up 80% of the available width */
+            }
+            .view-menu-btn{
+                margin-top: 20px;
+            }
+            
+        
+            .logo {
+                width: 70px; /* Adjust logo size for small screens */
+                height: 70px;
+            }
+        
+           
+           
+            
+            
+        }
+         /* Mobile Responsive */
+         @media screen and (max-width: 1180px) {
+            #home {
+                max-height:90vh;
+                object-fit: contain;
+           }  
+             .home-content h4{
+                width: 100%;
+             } 
+            .nav-links ul {
+                padding: 10% 20px;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+              
+                left: 0;
+                border-radius: 0 10px 10px 0;
+                text-align: left;
+                background:rgb(242, 244, 241);
+                width: 65%;
+                height: 100vh;
+                gap: 10px;
+                transform: translateX(-100%); /* Initially hidden */
+                transition: transform 0.5s ease-in-out; /* Smooth slide-in and slide-out */
+            }  #menu-icon {
+                margin: 10px; /* Increase this value to lower the icon */
+                
+            }
+            
+            .nav-links ul li a:hover{
+                color: #faa11c;
+            }
+
+        .nav-links ul li a:hover::after {
+            width: 0; /* Expand line to full text length on hover */
+            color: #a56363;
+        }
+            .nav-links.active ul {
+                transform: translateX(0); /* Slide in when active */
+            }
+
+    /* Add a horizontal line below the nav links in smaller screens */
+    /* Style for each nav link item in smaller screens */
+    .nav-links ul li {
+     
+        margin: 0 0 5px 0; /* Remove margin */
+        width: 100%; /* Ensure the list item takes up full width of the nav */
+        border-bottom: 1px solid #a3a3a3; /* Adds a border under each link */
+    }    
+            .nav-links ul li a {
+                color: #333; /* Dark gray color for better contrast on white */
+                font-size: 16px;
+                text-decoration: none; /* Remove underline */
+                transition: color 0.3s ease; /* Smooth transition on hover */
+            }
+            /* Subtle horizontal divider between nav links */
+    .nav-links ul li:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light gray line */
+    }
+        }
+/* For larger screens, navbar remains at the top */
+
+        /* For larger screens, the menu should remain horizontal */
+        @media screen and (min-width: 1180px) {
+            .nav-links ul {
+                display: flex;
+                opacity: 1;
+                transform: none;
+            }
+
+            #menu-icon {
+                display: none;
+            }
+            
+        }
+
+  @media screen and (max-width: 788px) {
+    #home {
+        max-height:80vh;
+        object-fit: contain;
+   } 
+
+    }
+
+    /* Scroll Up Button Styles */
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px; /* Position the button 20px from the bottom */
+    right: 20px;  /* Position the button 20px from the right */
+    background-color: #015c19; /* Dark green background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px; /* Adjust the size of the icon */
+    border-radius: 50%; /* Make it round */
+    cursor: pointer;
+    
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+  }
+  /* Hover effect for the button */
+  #scrollUpBtn:hover {
+    background-color: #006400; /* Slightly lighter green on hover */
+  }
+
