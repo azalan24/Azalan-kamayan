@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Basic Meta Tags -->
+    <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="keywords" content="Azalan Kamayan Restaurant, restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Tags for Facebook -->
+    <meta property="og:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta property="og:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta property="og:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    <meta property="og:url" content="https://azalankamayan.site/">
+    <meta property="og:type" content="website">
+    
+    <!-- Optional but recommended Open Graph Tags -->
+    <meta property="og:site_name" content="Azalan Kamayan Restaurant">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags (optional but helpful for Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="twitter:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta name="twitter:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    
+    <title>Azalan Kamayan Restaurant/Menu Page</title>
+    <link rel="stylesheet" href="menustyle.css">
+    <link rel="stylesheet" href="featured-dishes.css">
+    <link rel="stylesheet" href="aboutto.css">
+    <link rel="stylesheet" href="galleryto.css">
+    <link rel="stylesheet" href="contactsto.css">
+    <link rel="stylesheet" href="foot.css">
+
+    <link rel="stylesheet" href="testimony.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+    <!--poppins-font-family------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--using-Font-Awesome-------------------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }#firstpart{
+            height: 20vh;
+            background-color:#f4f4f4;
+        }
+        .headd {
+            text-align: center;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .backhome{padding-left: 20px;
+            text-align: left;
+            
+            
+        }
+        .headd h3 {
+            font-size: 1em;
+            padding-left: 20px;
+            text-align: left;
+            color:  #6b8e23;
+        }
+        .headd h1 {color:#2c3e50;
+            font-size: 2em;
+            margin-top: 15px;
+        }
+        .description {
+            font-size: 1em;
+            color: #7f8c8d;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        /* Best Selling Dish Section */
+        .best-seller {
+            margin-top: 60px;
+            margin-left: 20px;
+            padding-left: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .best-seller h2 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .best-seller p {
+            font-size: 1em;
+            color: #7f8c8d;
+            line-height: 1.5;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        /* Image Gallery Section */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .image-item {
+            text-align: left;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image-item h4 {
+            font-size: 0.9em;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+       
+
+        /* New Section Below Image Gallery */
+        .featured-section {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-top: 40px;
+            margin-right: auto;
+        }
+
+        .featured-section img {
+            width: 100%;
+            height:230px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .overlay h2 {
+            font-weight: bold;
+            font-size: 1.8em;
+            margin-bottom: 10px; /* Reduced space between title and description */
+        }
+
+        .overlay p {
+            font-size: 1.1em;
+            line-height: 1.4;
+            max-width: 80%;
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .button-container .book-btn {
+            background-color: #0c922b;
+            color: white;
+        }
+
+        .button-container .deliver-btn {
+            background-color: transparent;
+            color: #ffff;
+            border: 2px solid #ffff;
+        }
+
+        .category-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            position: relative;
+            width: 100%;
+            border-radius: 30px;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.872); /* Adds shadow */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .category-wrapper {
+            display: flex;
+            gap: 5px;
+            padding: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .category-item {
+            flex: 0 0 18%; /* Show 5 items at a time */
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+            color: #2c3e50;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .category-item:hover {
+            color: #e74c3c;
+        }
+       
+        /* Hide scrollbar */
+        .category-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .category-select{
+          display: none;
+        }
+
+        .category-images {
+          max-width: 1200px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 20px;
+      }
+
+      .category-section h2 {
+          font-size: 1em;
+          color: black;
+          padding: 20px;
+          margin-bottom: 15px;
+      }
+
+      .image-grid {
+          display: grid;
+          gap: 15px;
+          margin-left: 80px;
+          margin-bottom: 40px;
+      }
+
+      .image-items img {
+          width: 200px;
+          height: 180px;
+          border-radius: 8px;
+      }
+
+      .category-section {
+          margin-top: 40px;
+          display: block;
+      }
+
+      .category-item-wrapper {
+          display: flex;
+          align-items: center;
+      }.dish-info {
+        margin-left: 15px;
+        text-align: left;
+        max-width: 200px;
+    }
+
+    .dish-info h3 {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #2c3e50;
+    }
+
+    .dish-info p {
+        color: #7f8c8d;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    .price {
+        font-size: 1.1em;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+
+      @media (min-width: 768px) {
+        .image-grid {
+          
+            grid-template-columns: repeat(2, 1fr); /* Two images per row */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .image-grid {
+            grid-template-columns: 1fr; /* Stack images on mobile screens */
+            margin-left: 0;
+        }
+        .image-item h4 {
+            font-size: 1em;
+            margin-top: 10px;
+            padding-left: 0;
+        }
+    }
+        @media (max-width: 768px) {
+          .category-wrapper {
+           
+              display: none; /* Hide the category items in small screens */
+          }
+          .category-container{
+            box-shadow: none; /* Adds shadow */
+          
+          }
+
+          .category-select {
+              display: block;
+              width: 90%;
+              margin: 0 auto;
+              padding: 10px;
+              font-size: 1.2em;
+              background-color: #f4f4f4;
+              border: 2px solid  #0c922b;
+              border-radius: 5px;
+          }
+      }
+      
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            .description {
+                width: 90%;
+                
+                padding: 0 15px;
+            }
+
+            .best-seller {
+                margin-left: 15px;
+                padding-left: 15px;
+            }
+
+            .best-seller h2 {
+                font-size: 1.3em;
+            }
+
+            .best-seller p {
+                font-size: 0.95em;
+            }
+            #featured-section{
+                padding: 40px;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;}
+              
+                .image-item img{
+height: 250px;
+               
+            }
+            .featured-section h2 {
+                font-size: 1.3em;
+            }
+
+            .featured-section p {
+                font-size: 1em;
+            }
+        }
+
+        /* Media query for very small screens */
+        @media (max-width: 480px) {
+            .description {
+                width: 95%;
+                padding: 0 10px;
+               
+            }
+
+            .best-seller {
+                margin-left: 10px;
+                padding-left: 10px;
+            }
+
+            .best-seller h2 {
+                font-size: 1.2em;
+            }
+
+            .best-seller p {
+                font-size: 0.9em;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .overlay h2 {
+                font-size: 1.4em;
+            }
+           
+            .overlay p {
+                font-size: 1em;
+            }
+
+            .button-container a {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar"><a href="#home">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="logo-text">
+                <h1>AZALAN</h1>
+                <p>Kamayan restaurant</p>
+            </div>
+        </div></a>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="#azalankamayan.site#Home">Home</a></li>
+                <li><a href="azalankamayan.site#our-story">About</a></li>
+                <li><a href="azalankamayan.site#featured-dishes">Menu</a></li>
+                <li><a href="azalankamayan.site#gallery">Gallery</a></li>
+                <li><a href="ReserveNow.html">Reservation</a></li>
+               
+                <!-- Search bar inside navbar -->
+                <li class="search-bar-container">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <i class="bx bx-search"></i>
+                    </button>
+                    <input type="text" placeholder="Search..." class="search-bar">
+                </li>
+                
+<!-- View Menu Button -->
+<button class="view-menu-btn" onclick="window.location.href='azalankamayan.site#Contacts'">Contact Us</button>
+                
+            </ul>
+        </div>
+
+        <div class="menu-icon bx bx-menu" id="menu-icon"></div>
+    </nav>
+<section id="firstpart">
+    <div></div>
+</section>
+    <div class="headd">  <p class="backhome"><a href="https://azalankamayan.site">/ Back</a></p>
+  
+        <h3>MENU PAGE</h3>
+      
+        <h1>Our Offered Dishes</h1>
+        <p class="description">
+            Our menu features a carefully crafted selection of dishes. Each bite is an experience, blending rich tastes with the heart and soul of our culinary heritage. Whether you're dining in or enjoying from home.   </p>
+        </div>
+
+    <!-- Best Selling Dish Section -->
+    <section class="best-seller">
+      <h2>Best Selling Dishes:</h2>
+      <p>Savor our delightful menus favorite</p>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="image-gallery">
+        <div class="image-item">
+            <img src="inasal-paa.jpg" alt="Dish 1">
+            <h4>Chicken Inasal- Paa</h4>
+            
+        </div>
+        <div class="image-item">
+            <img src="inasalpecho.jpg" alt="Dish 2">
+            <h4>Chicken Inasal- Pecho</h4>
+            
+        </div>
+        <div class="image-item">
+            <img src="canton.jpg" alt="Dish 3">
+            <h4>Seafood Chopsuey</h4>
+           
+        </div>
+        <div class="image-item">
+            <img src="lumpia.jpg" alt="Dish 4">
+            <h4>Lumpiang Shanghai</h4>
+            
+        </div>
+    </section>
+
+    <!-- Featured Section Below Image Gallery -->
+    <section class="featured-section">
+        <img src="yum.jpg" alt="Grilled Dishes">
+        <div class="overlay">
+            <h2>We Serve the Best Grilled Dishes in Roxas City</h2>
+            <p>Every meal is a feast of Filipino tradition. Book your table now or have it delivered at your door.</p>
+            <div class="button-container">
+                <a href="#" class="book-btn">Book Now</a>
+                <a href="#" class="deliver-btn">Deliver</a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Category Section -->
+   <section class="category-container">
+    <div class="category-wrapper">
+        <div class="category-item" onclick="showCategory('sizzling')">Sizzling Value Meals</div>
+        <div class="category-item" onclick="showCategory('gulay')">Gulay, Baka, Baboy & Manok</div>
+        <div class="category-item" onclick="showCategory('pampagana')">Pampagana</div>
+        <div class="category-item" onclick="showCategory('sinugba')">Sinugba, Inasal, Kag Inihaw</div>
+        <div class="category-item" onclick="showCategory('merienda')">Merienda Specials</div>
+    </div>
+    <select class="category-select" onchange="showCategory(this.value)">
+        <option value="">Select Category</option>
+        <option value="sizzling">Sizzling Value Meals</option>
+        <option value="gulay">Gulay, Baka, Baboy & Manok</option>
+        <option value="pampagana">Pampagana</option>
+        <option value="sinugba">Sinugba, Inasal, Kag Inihaw</option>
+        <option value="merienda">Merienda Specials</option>
+    </select>
+</section>
+
+<!-- Category Images -->
+<!-- Category Images -->
+<section class="category-images">
+  <div class="category-section" id="sizzling">
+      <h2>Sizzling Value Meals</h2>
+      <div class="image-grid">
+          <div class="image-items">
+              <div class="category-item-wrapper">
+                  <img src="inasalpecho.jpg" alt="Dish 1">
+                  <div class="dish-info">
+                      <h3>Dish 1</h3>
+                      <p>Delicious sizzling meal with savory flavors.</p>
+                      <p class="price">$12.99</p>
+                  </div>
+              </div>
+          </div>
+          <div class="image-items">
+              <div class="category-item-wrapper">
+                  <img src="inasal-paa.jpg" alt="Dish 2">
+                  <div class="dish-info">
+                      <h3>Dish 2</h3>
+                      <p>Grilled chicken, a perfect mix of tender and crispy.</p>
+                      <p class="price">$10.99</p>
+                  </div>
+              </div>
+          </div>
+          <div class="image-items">
+              <div class="category-item-wrapper">
+                  <img src="image3.jpg" alt="Dish 3">
+                  <div class="dish-info">
+                      <h3>Dish 3</h3>
+                      <p>A flavorful dish that will satisfy your taste buds.</p>
+                      <p class="price">$14.99</p>
+                  </div>
+              </div>
+          </div>
+          <div class="image-items">
+              <div class="category-item-wrapper">
+                  <img src="image4.jpg" alt="Dish 4">
+                  <div class="dish-info">
+                      <h3>Dish 4</h3>
+                      <p>A perfect dish for any meal occasion.</p>
+                      <p class="price">$11.99</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+    <div class="category-section" id="pampagana">
+        <h2>Pampagana</h2>
+        <div class="image-grid">
+            <div class="image-items"><img src="image12.jpg" alt="Dish 12"></div>
+            <div class="image-items"><img src="image13.jpg" alt="Dish 13"></div>
+            <div class="image-items"><img src="image14.jpg" alt="Dish 14"></div>
+            <div class="image-items"><img src="image15.jpg" alt="Dish 15"></div>
+            <div class="image-items"><img src="image16.jpg" alt="Dish 16"></div>
+            <div class="image-items"><img src="image17.jpg" alt="Dish 17"></div>
+        </div>
+    </div>
+
+    <div class="category-section" id="sinugba">
+        <h2>Sinugba, Inasal, Kag Inihaw</h2>
+        <div class="image-grid">
+            <div class="image-items"><img src="image18.jpg" alt="Dish 18"></div>
+            <div class="image-items"><img src="image19.jpg" alt="Dish 19"></div>
+            <div class="image-items"><img src="image20.jpg" alt="Dish 20"></div>
+            <div class="image-items"><img src="image21.jpg" alt="Dish 21"></div>
+            <div class="image-items"><img src="image22.jpg" alt="Dish 22"></div>
+            <div class="image-items"><img src="image23.jpg" alt="Dish 23"></div>
+            <div class="image-items"><img src="image24.jpg" alt="Dish 24"></div>
+            <div class="image-items"><img src="image25.jpg" alt="Dish 25"></div>
+        </div>
+    </div>
+
+    <div class="category-section" id="merienda">
+        <h2>Merienda Specials</h2>
+        <div class="image-grid">
+            <div class="image-items"><img src="image26.jpg" alt="Dish 26"></div>
+            <div class="image-items"><img src="image27.jpg" alt="Dish 27"></div>
+            <div class="image-items"><img src="image28.jpg" alt="Dish 28"></div>
+            <div class="image-items"><img src="image29.jpg" alt="Dish 29"></div>
+            <div class="image-items"><img src="image30.jpg" alt="Dish 30"></div>
+            <div class="image-items"><img src="image31.jpg" alt="Dish 31"></div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+      <!-- Column 1: Locations -->
+      <div class="footer-column">
+        <h4>Locations</h4>
+        <ul>
+          <li>Pueblo de Panay Township,<br> Roxas City, Capiz, 5800</li>
+          <h4>Email</h4>
+          <li><a href="mailto:info@example.com">info@example.com</a></li>
+          
+        </ul>
+      </div>
+
+   
+      <!-- Column 3: Quick Links -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#azalankamayan.site#Home">Home</a></li>
+                <li><a href="azalankamayan.site#our-story">Our Story</a></li>
+                <li><a href="azalankamayan.site#featured-dishes">Menu</a></li>
+                <li><a href="azalankamayan.site#gallery">Gallery</a></li>
+                <li><a href="ReserveNow.html">Reservation</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: For Developers -->
+      <div class="footer-column">
+        <h4>Web Developers</h4>
+        <ul>
+          <li><a href="#">Redgie-RR Bula</a></li>
+          <li><a href="#">Jane Dela Torre</a></li>
+          <li><a href="#">Christine Leilani Delay</a></li>
+          <li><a href="#">Jevy Farofaldane</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: Open Hours -->
+      <div class="footer-column">
+        <h4>Open Hours</h4>
+        <ul>
+         
+          <li>Mon-Sun: 10:00 AM - 10:00 PM</li>
+         
+        </ul>
+      </div>
+
+      <!-- Column 6: Business Logo and Name with Subtitle -->
+      <div class="footer-column">
+        <div class="logos">
+          
+          <img src="logo.png" alt="Logo"> <!-- Replace with your logo URL -->
+          <h2>AZALAN</h2>
+          <p>Kamayan Restaurant</p>
+        </div>
+      </div>
+    </div>
+
+   
+  
+
+    <!-- Copyright Notice -->
+  
+
+  <div class="footer-bottom">
+    <div class="copyright">
+        © Copyright 2024, All Rights Reserved by Azalan Kamayan Restaurant
+    </div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://foodpanda.com" target="_blank"><i class="fas fa-utensils"></i></a>
+   
+</div>
+</footer>
+<!-- Scroll Up Button -->
+<button id="scrollUpBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+    
+// Mobile Menu Toggle
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.nav-links');
+let navLinks = document.querySelectorAll('.nav-links ul li a');
+
+// Function to toggle the mobile menu
+menu.onclick = () => {
+    menu.classList.toggle('bx-x'); // Change icon to 'X'
+    navlist.classList.toggle('active'); // Trigger animation
+};
+
+// Hide menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navlist.classList.remove('active'); // Hide the menu
+        menu.classList.remove('bx-x'); // Reset the icon
+    });
+});
+
+// Navbar scroll behavior (optional)
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Image Slideshow Background Change
+let images = [
+    'azalan bg.png',
+    'sfdfdf.jpg',
+    '2d.jpg',
+    'ac.jpg',
+    'out.jpg'
+];
+let currentIndex = 0;
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Create a new div element for background fade
+    const fadeDiv = document.createElement('div');
+    fadeDiv.classList.add('background-fade');
+    fadeDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+    
+    // Append the fade div to the #home element
+    const homeElement = document.getElementById('home');
+    homeElement.appendChild(fadeDiv);
+    
+    // Trigger fade effect
+    setTimeout(() => {
+        fadeDiv.style.opacity = 1; // Make the new background fully visible
+    }, 100); // Small delay to ensure the background image is set before transitioning
+    
+    // Remove the old background after fade effect is completed
+    setTimeout(() => {
+        homeElement.removeChild(homeElement.querySelector('.background-fade:not([style*="opacity: 1"])'));
+    }, 1500); // After the fade is complete (1.5s)
+}
+
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
+
+// Initialize first background change
+changeBackground();
+
+// Search Bar Toggle
+function toggleSearch() {
+    var searchBar = document.querySelector('.search-bar');
+    searchBar.classList.toggle('expanded');
+    if (searchBar.classList.contains('expanded')) {
+        searchBar.focus(); // Focus the input field when expanded
+    }
+}
+
+// Scroll-up Button
+const scrollUpBtn = document.getElementById('scrollUpBtn');
+
+// Show the button when scrolling down 100px from the top
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollUpBtn.style.display = 'block'; // Show the button
+    } else {
+        scrollUpBtn.style.display = 'none'; // Hide the button when at the top
+    }
+};
+
+// When the button is clicked, scroll to the top
+scrollUpBtn.onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
+};
+
+// Gallery Modal Code
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const showMoreBtn = document.getElementById('showMoreBtn');
+const initialVisibleCount = 6;
+
+for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+    galleryImages[i].parentElement.style.display = 'none';
+}
+
+let showMore = false;
+showMoreBtn.addEventListener('click', () => {
+    showMore = !showMore;
+    if (showMore) {
+        galleryImages.forEach(item => {
+            item.parentElement.style.display = 'block';
+        });
+        showMoreBtn.textContent = 'SEE LESS';
+    } else {
+        for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+            galleryImages[i].parentElement.style.display = 'none';
+        }
+        showMoreBtn.textContent = 'SEE MORE';
+    }
+});
+
+let currentIndexModal = 0;
+
+function openModal(index) {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = galleryImages[index].src;
+    modal.classList.add('show');
+    currentIndexModal = index;
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.remove('show');
+}
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('modal')) {
+        closeModal();
+    }
+});
+
+galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => openModal(index));
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndexModal > 0) {
+        openModal(currentIndexModal - 1);
+    }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndexModal < galleryImages.length - 1) {
+        openModal(currentIndexModal + 1);
+    }
+});
+
+// Keyboard navigation (Arrow keys)
+document.addEventListener('keydown', (event) => {
+    if (document.getElementById('modal').classList.contains('show')) { // Only listen if modal is open
+        if (event.key === 'ArrowLeft') { // Left arrow key for previous
+            if (currentIndexModal > 0) {
+                openModal(currentIndexModal - 1);
+            }
+        } else if (event.key === 'ArrowRight') { // Right arrow key for next
+            if (currentIndexModal < galleryImages.length - 1) {
+                openModal(currentIndexModal + 1);
+            }
+        }
+    }
+});
+
+    //menupage
+    // Function to show the selected category
+  function showCategory(category) {
+      // Hide all category sections
+      var sections = document.querySelectorAll('.category-section');
+      sections.forEach(function(section) {
+          section.style.display = 'none';
+      });
+
+      // Show the selected category
+      var selectedSection = document.getElementById(category);
+      if (selectedSection) {
+          selectedSection.style.display = 'block';
+      }
+  }</script>
+</body>
+</html>
