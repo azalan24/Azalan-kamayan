@@ -5,47 +5,48 @@
       background-color: #f8f8f8;
     }
 
-    #our-gallery {
+    #our-story {
         font-family: Arial, sans-serif;
       padding: 40px 20px;
       max-width: 1200px;
-      margin: auto;
+   margin: auto;
     }
 
-    #our-gallery h2 {
+    #our-story h2 {
       color: #6B8E23;
       font-size: 1.3em;
+      
       text-transform: uppercase;
       margin-bottom: 10px;
     }
 
-    #our-gallery h3 {
+    #our-story h3 {
       color: #333;
       font-size: 2em;
       font-weight: bold;
       margin-bottom: 20px;
     }
 
-    #our-gallery p {
+    #our-story p {
       color: #555;
       line-height: 1.8;
       margin-bottom: 20px;
     }
 
-    #our-gallery .grid-container {
+    #our-story .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       align-items: center;
     }
 
-    #our-gallery img {
+    #our-story img {
       width: 90%;
       border-radius: 0;
       box-shadow: 60px 40px 2px #6B8E23;
     }
 
-    #our-gallery .video-container {
+    #our-story .video-container {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
@@ -54,7 +55,7 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    #our-gallery .video-container iframe {
+    #our-story .video-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -62,15 +63,15 @@
       height: 100%;
     }
 
-    #our-gallery .watch-section {
+    #our-story .watch-section {
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
-    #our-gallery .icon {
-      background-color: #FFD700;
-      color: #fff;
+    #our-story .icon {
+     
       font-size: 1.2em;
       font-weight: bold;
       border-radius: 50%;
@@ -81,7 +82,7 @@
       align-items: center;
     }
 
-    #our-gallery .watch-title {
+    #our-story .watch-title {
       color: #333;
       font-size: 1.5em;
       font-weight: bold;
@@ -89,57 +90,57 @@
 
    
     @media (max-width: 768px) {
-      #our-gallery .grid-container {
+      #our-story .grid-container {
         grid-template-columns: 1fr;
       }
-      #our-gallery img {
+      #our-story img {
         width: 100%;
         box-shadow: 40px 20px 2px #6B8E23;
         
       }
-      #our-gallery h3 {
+      #our-story h3 {
         font-size: 1.8em;
       }
 
-      #our-gallery h2 {
+      #our-story h2 {
         font-size: 1.3em;
       }
 
-      #our-gallery p {
+      #our-story p {
         font-size: 1em;
       }
 
-      #our-gallery .icon {
+      #our-story .icon {
         width: 30px;
         height: 30px;
         font-size: 1em;
       }
 
-      #our-gallery .watch-title {
+      #our-story .watch-title {
         font-size: 1.2em;
       }
     }
 
     @media (max-width: 480px) {
-      #our-gallery h3 {
+      #our-story h3 {
         font-size: 1.5em;
       }
 
-      #our-gallery h2 {
+      #our-story h2 {
         font-size: 1.1em;
       }
 
-      #our-gallery p {
+      #our-story p {
         font-size: 0.9em;
       }
 
-      #our-gallery .icon {
+      #our-story .icon {
         width: 25px;
         height: 25px;
         font-size: 0.9em;
       }
 
-      #our-gallery .watch-title {
+      #our-story .watch-title {
         font-size: 1em;
       }
     }

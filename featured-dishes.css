@@ -1,0 +1,119 @@
+.featured-dishes {
+    text-align: center;
+    padding: 50px 20px;
+   
+}
+
+.featured-dishes h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.featured-dishes p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0 40px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dishes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dish {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 350px;
+    margin: 10px;
+}
+
+.dish img {
+    width: 100%;
+    height: 220px;
+    object-fit: fill;
+    display: block;
+}
+
+.dish-content {
+    padding: 20px;
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: space-between;
+}
+
+.dish h3 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.dish p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Adjust the menu button placement */
+.menu-button {
+    display: inline-block;
+    margin-top: 20px; /* Space between the description and the button */
+    padding: 10px 20px;
+    text-align: center;
+    background-color:  #0c922b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color:  #068724;
+}
+
+@media (max-width: 768px) {
+    .featured-dishes h1 {
+        font-size: 2rem;
+    }
+
+    .featured-dishes p {
+        font-size: 1rem;
+    }
+
+    .dishes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dish {
+        width: 90%; /* Shrink to 80% on smaller screens */
+        margin: 5px;
+    }
+
+    .dish-content {
+        padding: 10px;
+    }
+
+    .dish h3 {
+        font-size: 1.1rem;
+    }
+
+    .dish img {
+        height: 180px; object-fit:cover;
+    }
+
+    .menu-button {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+}
