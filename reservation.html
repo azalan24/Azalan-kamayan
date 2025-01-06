@@ -17,143 +17,152 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: url('cover.jpg.jpeg') no-repeat center center fixed;
-            background-size: cover;
+           
             color: #fff;
         }
         #firstpart{
-            height: 20vh;
+            height: 15vh;
             background-color:#f4f4f4;
         }
         .container {
             display: flex;
+            background: url('cover.jpg.jpeg') no-repeat center center fixed;
+            background-size: cover;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px; /* Reduced padding */
+            padding: 20px;
             height: 100vh;
         }
         
         .text-section {
-            max-width: 80%; /* Reduced max-width */
+            max-width: 80%;
             margin: 0 auto;
             text-align: center;
-            padding: 30px; /* Reduced padding */
+            padding: 30px;
             color: white;
         }
         
         .text-section p:first-child {
-            font-size: 1rem; /* Reduced font-size */
+            font-size: 1rem;
             color: #8ecf63;
-            margin-bottom: 8px; /* Reduced margin */
+            margin-bottom: 8px;
         }
         
         .text-section h1 {
-            font-size: 2rem; /* Reduced font-size */
+            font-size: 2rem;
             line-height: 1.2;
             text-align: left;
-            margin: 15px 0; /* Reduced margin */
+            color: #fff;
+            margin: 15px 0;
         }
         
         .text-section p {
-            font-size: 0.9rem; /* Reduced font-size */
-            margin: 8px 0; /* Reduced margin */
+            font-size: 0.9rem;
+            margin: 8px 0;
         }
         
         .text-section .phone-number {
-            font-size: 1.2rem; /* Reduced font-size */
+            font-size: 1.2rem;
             font-weight: bold;
             color: #8ecf63;
-            margin-top: 12px; /* Reduced margin */
+            margin-top: 12px;
         }
         
-        /* Form section */
         .form-section {
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
-            padding: 15px; /* Reduced padding */
+            padding: 15px;
             width: 100%;
-            max-width: 350px; /* Reduced max-width */
-            margin: 15px auto; /* Reduced margin */
+            max-width: 450px; /* Increased max-width */
+            margin: 15px auto;
         }
         
         .form-section h2 {
-            font-size: 1.2rem; /* Reduced font-size */
-            margin-bottom: 15px; /* Reduced margin */
+            font-size: 1.2rem;
+            margin-bottom: 15px;
             text-align: center;
         }
         
         form {
             display: flex;
             flex-direction: column;
-            gap: 12px; /* Reduced space between form elements */
+            gap: 12px;
         }
         
         .form-row {
             display: flex;
-            gap: 15px; /* Reduced space between first name and last name */
+            gap: 15px;
             justify-content: space-between;
         }
         
         .input-group {
             display: flex;
             flex-direction: column;
-            width: 48%; /* Keeps input size consistent */
+            width: 48%;
         }
         
         form input,
         form select,
         form textarea {
             width: 100%;
-            padding: 8px; /* Reduced padding */
-            font-size: 0.9rem; /* Reduced font-size */
+            padding: 8px;
+            font-size: 0.9rem;
             border: none;
             border-radius: 5px;
             box-sizing: border-box;
-        }
-        
-        form label {
-            font-size: 0.9rem; /* Reduced font-size */
-            font-weight: bold;
-            color: #fff;
         }
         
         form button {
             background-color: #ff8c00;
             color: white;
             border: none;
-            padding: 15px; /* Reduced padding */
-            font-size: 0.9rem; /* Reduced font-size */
+            padding: 15px;
+            font-size: 0.9rem;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
-            margin-top: 15px; /* Reduced margin */
-            margin-bottom: 15px; /* Reduced margin */
+            margin-top: 15px;
+            margin-bottom: 15px;
             text-align: center;
         }
         
         form button:hover {
             background-color: #ffa733;
+        }@media (max-width:768px){
+            .text-section h1 {
+                justify-content: center;
+                font-size: 2rem;
+                align-items: center;
+                line-height: 1.2;
+                text-align: center;
+                color: #fff;
+                margin: 15px 0;
+            }
+            #firstpart{
+                height: 18vh;
+            }
         }
         
         @media (min-width: 768px) {
+           
             .container {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                padding: 30px; /* Reduced padding */
+                padding: 30px;
             }
         
             .text-section {
-                max-width: 35%; /* Reduced max-width */
+                max-width: 35%;
                 text-align: left;
-                padding: 30px; /* Reduced padding */
+                padding: 30px;
             }
         
             .form-row {
                 flex-direction: row;
                 justify-content: space-between;
-                gap: 8px; /* Reduced space between first name and last name */
+                gap: 8px;
             }
         
             form input {
@@ -161,143 +170,6 @@
                 min-width: 48%;
             }
         }
-        
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        .modal-content {
-            background: #ffffff;
-            color: #333;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: left;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            width: 90%;
-        }
-        
-        .modal-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .modal-content p {
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-        
-        .modal-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-        }
-        
-        .modal-buttons button {
-            background-color: #ff8c00;
-            color: rgb(0, 0, 0);
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            flex: 1;
-            transition: background-color 0.3s ease;
-        }
-        
-        .modal-buttons button:hover {
-            background-color: #ffa733;
-        }
-        
-        #confirmButton {
-            background-color: #ffffff;
-            border: 2px solid #000;
-            color: #000;
-        }
-        
-        #confirmButton:hover {
-            background-color: #afafaf;
-            border-color: #000;
-        }
-        
-        #cancelButton {
-            background-color: #f44336;
-        }
-        
-        #cancelButton:hover {
-            background-color: #e63927;
-        }
-        
-        /*For alert*/
-        .toast {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #323232;
-            color: #fff;
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s;
-            text-align: center;
-            font-size: 1.2rem;
-            z-index: 1000;
-        }
-        
-        .toast.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .Btn-toast {
-            display: inline-block;
-            margin-top: 15px;
-            background-color: #ff8c00;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .Btn-toast:hover {
-            background-color: #ffa733;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .Btn-toast:active {
-            background-color: #e67600;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transform: translateY(0);
-        }
-        
-        /*for close alert*/
-        .hidden {
-            display: none;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
     </style>
 
 </head>
@@ -318,21 +190,15 @@
                 <li><a href="https://azalankamayan.site#featured-dishes">Menu</a></li>
                 <li><a href="https://azalankamayan.site#gallery">Gallery</a></li>
                 <li><a href="Reservation.html">Reservation</a></li>
-               
-                <!-- Search bar inside navbar -->
                 <li class="search-bar-container">
                     <button class="search-btn" onclick="toggleSearch()">
                         <i class="bx bx-search"></i>
                     </button>
                     <input type="text" placeholder="Search..." class="search-bar">
                 </li>
-                
-<!-- View Menu Button -->
-<button class="view-menu-btn" onclick="window.location.href='azalankamayan.site#Contacts'">Contact Us</button>
-                
+                <button class="view-menu-btn" onclick="window.location.href='azalankamayan.site#Contacts'">Contact Us</button>
             </ul>
         </div>
-
         <div class="menu-icon bx bx-menu" id="menu-icon"></div>
     </nav><section id="firstpart"></section>
     <div class="container">
@@ -348,19 +214,14 @@
             <form action="https://formspree.io/f/xqkrbnze" method="POST" onsubmit="openModal(event)">
                 <div class="form-row">
                     <div class="input-group">
-                        <label for="first-name">First Name</label>
                         <input type="text" id="first-name" placeholder="First Name" required>
                     </div>
                     <div class="input-group">
-                        <label for="last-name">Last Name</label>
                         <input type="text" id="last-name" placeholder="Last Name" required>
                     </div>
                 </div>
-                <label for="email">Email Address</label>
                 <input type="email" id="email" placeholder="Email Address" required>
-                <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" placeholder="Phone Number" required>
-                <label for="guest-count">Number of Guests</label>
                 <select id="guest-count" required>
                     <option value="" disabled selected>Number of Guests</option>
                     <option value="1">1</option>
@@ -369,30 +230,85 @@
                     <option value="4">4</option>
                     <option value="5+">5+</option>
                 </select>
-                <label for="requests">Additional Requests (Optional)</label>
                 <textarea id="requests" placeholder="Additional Requests (Optional)"></textarea>
                 <button type="submit">Reserve Now</button>
             </form>
         </div>
-
-        <!-- Modal -->
-        <div class="modal" id="confirmationModal">
-            <div class="modal-content">
-                <p>Would you like to confirm your reservation?</p>
-                <div class="modal-buttons">
-                    <button id="confirmButton" onclick="confirmReservation()">Confirm</button>
-                    <button onclick="cancelReservation()">Cancel</button>
-                </div>
-            </div>
-        </div>
-
-        <!--for alert button-->
-        <div id="toastMessage" class="toast hidden">
-            <p>Reservation Confirmed!</p>
-            <button class="Btn-toast" onclick="hideToast()">Okay</button>
-        </div>
     </div>
 
+    <footer>
+        <div class="footer-container">
+          <!-- Column 1: Locations -->
+          <div class="footer-column">
+            <h4>Locations</h4>
+            <ul>
+              <li>Pueblo de Panay Township,<br> Roxas City, Capiz, 5800</li>
+              <h4>Email</h4>
+              <li><a href="mailto:info@example.com">azalankamayan24@gmail.com</a></li>
+              
+            </ul>
+          </div>
+    
+       
+          <!-- Column 3: Quick Links -->
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#azalankamayan.site#Home">Home</a></li>
+                    <li><a href="azalankamayan.site#our-story">Our Story</a></li>
+                    <li><a href="azalankamayan.site#featured-dishes">Menu</a></li>
+                    <li><a href="azalankamayan.site#gallery">Gallery</a></li>
+                    <li><a href="Reservation.html">Reservation</a></li>
+            </ul>
+          </div>
+    
+          <!-- Column 4: For Developers -->
+          <div class="footer-column">
+            <h4>Web Developers</h4>
+            <ul>
+              <li><a href="#">Redgie-RR Bula</a></li>
+              <li><a href="#">Jane Dela Torre</a></li>
+              <li><a href="#">Christine Leilani Delay</a></li>
+              <li><a href="#">Jevy Farofaldane</a></li>
+            </ul>
+          </div>
+    
+          <!-- Column 5: Open Hours -->
+          <div class="footer-column">
+            <h4>Open Hours</h4>
+            <ul>
+             
+              <li>Mon-Sun: 10:00 AM - 10:00 PM</li>
+             
+            </ul>
+          </div>
+    
+          <!-- Column 6: Business Logo and Name with Subtitle -->
+          <div class="footer-column">
+            <div class="logos">
+              
+              <img src="logo.png" alt="Logo"> <!-- Replace with your logo URL -->
+              <h2>AZALAN</h2>
+              <p>Kamayan Restaurant</p>
+            </div>
+          </div>
+        </div>
+    
+       
+      
+    
+        <!-- Copyright Notice -->
+      
+    
+      <div class="footer-bottom">
+        <div class="copyright">
+            © Copyright 2024, All Rights Reserved by Azalan Kamayan Restaurant
+        </div>
+       
+    </footer>
+    <!-- Scroll Up Button -->
+    <button id="scrollUpBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    
     <script>
         function openModal(event) {
             event.preventDefault();
@@ -440,6 +356,194 @@
             const toast = document.getElementById('toastMessage');
             toast.classList.add('hidden');
         }
+        // Mobile Menu Toggle
+        let menu = document.querySelector('#menu-icon');
+        let navlist = document.querySelector('.nav-links');
+        let navLinks = document.querySelectorAll('.nav-links ul li a');
+        
+        // Function to toggle the mobile menu
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x'); // Change icon to 'X'
+            navlist.classList.toggle('active'); // Trigger animation
+        };
+        
+        // Hide menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navlist.classList.remove('active'); // Hide the menu
+                menu.classList.remove('bx-x'); // Reset the icon
+            });
+        });
+        
+        // Navbar scroll behavior (optional)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Image Slideshow Background Change
+        let images = [
+            'azalan bg.png',
+            'sfdfdf.jpg',
+            '2d.jpg',
+            'ac.jpg',
+            'out.jpg'
+        ];
+        let currentIndex = 0;
+        
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            
+            // Create a new div element for background fade
+            const fadeDiv = document.createElement('div');
+            fadeDiv.classList.add('background-fade');
+            fadeDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+            
+            // Append the fade div to the #home element
+            const homeElement = document.getElementById('home');
+            homeElement.appendChild(fadeDiv);
+            
+            // Trigger fade effect
+            setTimeout(() => {
+                fadeDiv.style.opacity = 1; // Make the new background fully visible
+            }, 100); // Small delay to ensure the background image is set before transitioning
+            
+            // Remove the old background after fade effect is completed
+            setTimeout(() => {
+                homeElement.removeChild(homeElement.querySelector('.background-fade:not([style*="opacity: 1"])'));
+            }, 1500); // After the fade is complete (1.5s)
+        }
+        
+        // Change background every 5 seconds
+        setInterval(changeBackground, 5000);
+        
+        // Initialize first background change
+        changeBackground();
+        
+        // Search Bar Toggle
+        function toggleSearch() {
+            var searchBar = document.querySelector('.search-bar');
+            searchBar.classList.toggle('expanded');
+            if (searchBar.classList.contains('expanded')) {
+                searchBar.focus(); // Focus the input field when expanded
+            }
+        }
+        
+        // Scroll-up Button
+        const scrollUpBtn = document.getElementById('scrollUpBtn');
+        
+        // Show the button when scrolling down 100px from the top
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollUpBtn.style.display = 'block'; // Show the button
+            } else {
+                scrollUpBtn.style.display = 'none'; // Hide the button when at the top
+            }
+        };
+        
+        // When the button is clicked, scroll to the top
+        scrollUpBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
+        };
+        
+        // Gallery Modal Code
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const initialVisibleCount = 6;
+        
+        for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+            galleryImages[i].parentElement.style.display = 'none';
+        }
+        
+        let showMore = false;
+        showMoreBtn.addEventListener('click', () => {
+            showMore = !showMore;
+            if (showMore) {
+                galleryImages.forEach(item => {
+                    item.parentElement.style.display = 'block';
+                });
+                showMoreBtn.textContent = 'SEE LESS';
+            } else {
+                for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+                    galleryImages[i].parentElement.style.display = 'none';
+                }
+                showMoreBtn.textContent = 'SEE MORE';
+            }
+        });
+        
+        let currentIndexModal = 0;
+        
+        function openModal(index) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = galleryImages[index].src;
+            modal.classList.add('show');
+            currentIndexModal = index;
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('show');
+        }
+        
+        document.getElementById('closeModal').addEventListener('click', closeModal);
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('modal')) {
+                closeModal();
+            }
+        });
+        
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => openModal(index));
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentIndexModal > 0) {
+                openModal(currentIndexModal - 1);
+            }
+        });
+        
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentIndexModal < galleryImages.length - 1) {
+                openModal(currentIndexModal + 1);
+            }
+        });
+        
+        // Keyboard navigation (Arrow keys)
+        document.addEventListener('keydown', (event) => {
+            if (document.getElementById('modal').classList.contains('show')) { // Only listen if modal is open
+                if (event.key === 'ArrowLeft') { // Left arrow key for previous
+                    if (currentIndexModal > 0) {
+                        openModal(currentIndexModal - 1);
+                    }
+                } else if (event.key === 'ArrowRight') { // Right arrow key for next
+                    if (currentIndexModal < galleryImages.length - 1) {
+                        openModal(currentIndexModal + 1);
+                    }
+                }
+            }
+        });
+        
+            //menupage
+            // Function to show the selected category
+          function showCategory(category) {
+              // Hide all category sections
+              var sections = document.querySelectorAll('.category-section');
+              sections.forEach(function(section) {
+                  section.style.display = 'none';
+              });
+        
+              // Show the selected category
+              var selectedSection = document.getElementById(category);
+              if (selectedSection) {
+                  selectedSection.style.display = 'block';
+              }
+          }
     </script>
 </body>
 </html>
