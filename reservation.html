@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Basic Meta Tags -->
+    <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="keywords" content="Azalan Kamayan Restaurant, restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Tags for Facebook -->
+    <meta property="og:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta property="og:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta property="og:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    <meta property="og:url" content="https://azalankamayan.site/">
+    <meta property="og:type" content="website">
+    
+    <!-- Optional but recommended Open Graph Tags -->
+    <meta property="og:site_name" content="Azalan Kamayan Restaurant">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags (optional but helpful for Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="twitter:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta name="twitter:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    
+    <title>Azalan Kamayan Restaurant/Menu Page</title>
+    <link rel="stylesheet" href="menustyle.css">
+    <link rel="stylesheet" href="featured-dishes.css">
+    <link rel="stylesheet" href="aboutto.css">
+    <link rel="stylesheet" href="galleryto.css">
+    <link rel="stylesheet" href="contactsto.css">
+    <link rel="stylesheet" href="foot.css">
+
+    <link rel="stylesheet" href="testimony.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+    <!--poppins-font-family------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--using-Font-Awesome-------------------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
+ 
+    <title>Reserve Now</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('cover.jpg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        
+        .reservecontainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            height: 100vh;
+            max-width: 1200px; /* Max width for the container */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+        
+        .text-section {
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .text-section p:first-child {
+            font-size: 1.2rem;
+            color: #8ecf63;
+            margin-bottom: 10px;
+        }
+        
+        .text-section h1 {
+            font-size: 2.4rem;
+            line-height: 1.2;
+            color: #fff;
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .text-section p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        
+        .text-section .phone-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8ecf63;
+            margin-top: 15px;
+        }
+        
+        /* Form section */
+        .form-section {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        
+        .form-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #f4f4f4;
+            font-size: 16px;
+            color: #888;
+        }
+        
+        form input:valid,
+        form select:valid {
+            background: #ffffff;
+            color: #000;
+        }
+        
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        form textarea {
+            resize: none;
+            height: 80px;
+        }
+        
+        form input::placeholder,
+        form textarea::placeholder,
+        form select::placeholder {
+            color: #888;
+        }
+        
+        form select:focus,
+        form select option {
+            color: #000000;
+            background: #f4f4f4;
+        }
+        
+        form button {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        
+        form button:hover {
+            background-color: #ffa733;
+        }
+        
+        @media (min-width: 768px) {
+            .reservecontainer {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 50px;
+            }
+        
+            .text-section {
+                max-width: 40%;
+                text-align: left;
+                padding: 50px;
+            }
+        
+            .form-row {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        
+            form input {
+                flex: 1;
+                min-width: 48%;
+            }
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background: #ffffff;
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        .modal-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .modal-content p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .modal-buttons button {
+            background-color: #ff8c00;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            transition: background-color 0.3s ease;
+        }
+        
+        .modal-buttons button:hover {
+            background-color: #ffa733;
+        }
+        
+        #confirmButton {
+            background-color: #ffffff;
+            border: 2px solid #000;
+            color: #000;
+        }
+        
+        #confirmButton:hover {
+            background-color: #afafaf;
+            border-color: #000;
+        }
+        
+        #cancelButton {
+            background-color: #f44336;
+        }
+        
+        #cancelButton:hover {
+            background-color: #e63927;
+        }
+        
+        /*For alert*/
+        .toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #323232;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s;
+            text-align: center;
+            font-size: 1.2rem;
+            z-index: 1000;
+        }
+        
+        .toast.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .Btn-toast {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #ff8c00;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .Btn-toast:hover {
+            background-color: #ffa733;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .Btn-toast:active {
+            background-color: #e67600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: translateY(0);
+        }
+        
+        /*for close alert*/
+        .hidden {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <nav class="navbar" id="navbar"><a href="https://azalankamayan.site#Home">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="logo-text">
+                <h1>AZALAN</h1>
+                <p>Kamayan restaurant</p>
+            </div>
+        </div></a>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://azalankamayan.site#Home">Home</a></li>
+                <li><a href="https://azalankamayan.site#our-story">About</a></li>
+                <li><a href="https://azalankamayan.site#featured-dishes">Menu</a></li>
+                <li><a href="https://azalankamayan.site#gallery">Gallery</a></li>
+                <li><a href="ReserveNow.html">Reservation</a></li>
+               
+                <!-- Search bar inside navbar -->
+                <li class="search-bar-container">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <i class="bx bx-search"></i>
+                    </button>
+                    <input type="text" placeholder="Search..." class="search-bar">
+                </li>
+                
+<!-- View Menu Button -->
+<button class="view-menu-btn" onclick="window.location.href='azalankamayan.site#Contacts'">Contact Us</button>
+                
+            </ul>
+        </div>
+
+        <div class="menu-icon bx bx-menu" id="menu-icon"></div>
+    </nav>
+    <div class="reservecontainer">
+        <div class="text-section">
+            <p>We serve the best grilled dishes in Roxas City</p>
+            <h1>Need Booking?<br>Reserve Your Table.</h1>
+            <p>Delivery &middot; Takeout &middot; Dine-in</p>
+            <p class="phone-number">544-3454-435</p>
+        </div>
+
+        <div class="form-section">
+            <h2>Make a Reservation</h2>
+            <form action="https://formspree.io/f/xqkrbnze" method="POST" onsubmit="openModal(event)">
+                <div class="form-row">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="" disabled selected>Number of Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                </select>
+                <textarea placeholder="Additional Requests (Optional)"></textarea>
+                <button type="submit">Reserve Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <p>Would you like to confirm your reservation?</p>
+            <div class="modal-buttons">
+                <button id="confirmButton" onclick="confirmReservation()">Confirm</button>
+                <button onclick="cancelReservation()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!--for alert button-->
+    <div id="toastMessage" class="toast hidden">
+        <p>Reservation Confirmed!</p>
+        <button class="Btn-toast" onclick="hideToast()">Okay</button>
+    </div>
+
+    <script>
+        function openModal(event) {
+            event.preventDefault();
+    
+            // Fetch values from the form inputs
+            const firstName = document.querySelector('input[placeholder="First Name"]').value;
+            const lastName = document.querySelector('input[placeholder="Last Name"]').value;
+            const email = document.querySelector('input[placeholder="Email Address"]').value;
+            const phoneNumber = document.querySelector('input[placeholder="Phone Number"]').value;
+            const guestCount = document.querySelector('select').value;
+            const additionalRequests = document.querySelector('textarea').value || 'None';
+    
+            // Populate modal with reservation details
+            const modalContent = `
+                <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phoneNumber}</p>
+                <p><strong>Guests:</strong> ${guestCount}</p>
+                <p><strong>Requests:</strong> ${additionalRequests}</p>
+            `;
+            document.querySelector('.modal-content p').innerHTML = modalContent;
+    
+            // Show the modal
+            document.getElementById('confirmationModal').style.display = 'flex';
+        }
+    
+        function confirmReservation() {
+            
+            const toast = document.getElementById('toastMessage');
+            toast.classList.remove('hidden');
+            toast.classList.add('visible');
+            
+          
+            document.getElementById('confirmationModal').style.display = 'none';
+            
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('visible');
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    
+        function cancelReservation() {
+           
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+    
+        function hideToast() {
+            // Hide the toast manually
+            const toast = document.getElementById('toastMessage');
+            toast.classList.add('hidden');
+        }
+    </script>
+    
+</body>
+</html>
