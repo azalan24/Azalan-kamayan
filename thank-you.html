@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Basic Meta Tags -->
+    <meta name="description" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="keywords" content="Azalan Kamayan Restaurant, restaurant in Pueblo de Panay, best restaurant in Pueblo de Panay, Filipino cuisine in Pueblo de Panay, traditional Filipino dining, restaurants in roxas city, Azalan restaurant Roxas City, Filipino buffet, authentic Filipino food, restaurant in Pueblo de Panay, best Filipino restaurant, Kamayan style dining, family restaurant Pueblo de Panay, best seafood in Pueblo de Panay, Filipino food near me, Azalan Kamayan buffet">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Tags for Facebook -->
+    <meta property="og:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta property="og:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta property="og:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    <meta property="og:url" content="https://azalankamayan.site/">
+    <meta property="og:type" content="website">
+    
+    <!-- Optional but recommended Open Graph Tags -->
+    <meta property="og:site_name" content="Azalan Kamayan Restaurant">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags (optional but helpful for Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Azalan Kamayan Restaurant - Traditional Filipino Dining">
+    <meta name="twitter:description" content="Experience authentic Filipino cuisine in a traditional Kamayan style at Azalan Kamayan, located in Pueblo de Panay.">
+    <meta name="twitter:image" content="https://azalankamayan.site/path/to/your/image.jpg"> <!-- Make sure to provide a valid image URL -->
+    
+   
+    <link rel="stylesheet" href="testimony.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+   
+    <!-- Styles -->
+    <style>
+       
+
+   
+</style>
+</head>
+<body>
+
+    <div>
+        <h1>Thank You for Your Message!</h1>
+  
+
+    <main>
+        <p>We have received your message and will get back to you shortly.</p>
+        <p><a href="https://azalankamayan.site">Back to Home</a></p>
+    </main>
+</div>
+    
+   
+    
+    <script>   // Toggle mobile menu
+  // Mobile Menu Toggle
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.nav-links');
+let navLinks = document.querySelectorAll('.nav-links ul li a');
+
+// Function to toggle the mobile menu
+menu.onclick = () => {
+    menu.classList.toggle('bx-x'); // Change icon to 'X'
+    navlist.classList.toggle('active'); // Trigger animation
+};
+
+// Hide menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navlist.classList.remove('active'); // Hide the menu
+        menu.classList.remove('bx-x'); // Reset the icon
+    });
+});
+
+// Navbar scroll behavior (optional)
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Image Slideshow Background Change
+let images = [
+    'azalan bg.png',
+    'sfdfdf.jpg',
+    '2d.jpg',
+    'ac.jpg',
+    'out.jpg'
+];
+let currentIndex = 0;
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Create a new div element for background fade
+    const fadeDiv = document.createElement('div');
+    fadeDiv.classList.add('background-fade');
+    fadeDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+    
+    // Append the fade div to the #home element
+    const homeElement = document.getElementById('home');
+    homeElement.appendChild(fadeDiv);
+    
+    // Trigger fade effect
+    setTimeout(() => {
+        fadeDiv.style.opacity = 1; // Make the new background fully visible
+    }, 100); // Small delay to ensure the background image is set before transitioning
+    
+    // Remove the old background after fade effect is completed
+    setTimeout(() => {
+        homeElement.removeChild(homeElement.querySelector('.background-fade:not([style*="opacity: 1"])'));
+    }, 1500); // After the fade is complete (1.5s)
+}
+
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
+
+// Initialize first background change
+changeBackground();
+
+// Search Bar Toggle
+function toggleSearch() {
+    var searchBar = document.querySelector('.search-bar');
+    searchBar.classList.toggle('expanded');
+    if (searchBar.classList.contains('expanded')) {
+        searchBar.focus(); // Focus the input field when expanded
+    }
+}
+
+// Scroll-up Button
+const scrollUpBtn = document.getElementById('scrollUpBtn');
+
+// Show the button when scrolling down 100px from the top
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollUpBtn.style.display = 'block'; // Show the button
+    } else {
+        scrollUpBtn.style.display = 'none'; // Hide the button when at the top
+    }
+};
+
+// When the button is clicked, scroll to the top
+scrollUpBtn.onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
+};
+
+// Gallery Modal Code
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const showMoreBtn = document.getElementById('showMoreBtn');
+const initialVisibleCount = 6;
+
+for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+    galleryImages[i].parentElement.style.display = 'none';
+}
+
+let showMore = false;
+showMoreBtn.addEventListener('click', () => {
+    showMore = !showMore;
+    if (showMore) {
+        galleryImages.forEach(item => {
+            item.parentElement.style.display = 'block';
+        });
+        showMoreBtn.textContent = 'SEE LESS';
+    } else {
+        for (let i = initialVisibleCount; i < galleryImages.length; i++) {
+            galleryImages[i].parentElement.style.display = 'none';
+        }
+        showMoreBtn.textContent = 'SEE MORE';
+    }
+});
+
+let currentIndexModal = 0;
+
+function openModal(index) {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = galleryImages[index].src;
+    modal.classList.add('show');
+    currentIndexModal = index;
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.remove('show');
+}
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('modal')) {
+        closeModal();
+    }
+});
+
+galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => openModal(index));
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndexModal > 0) {
+        openModal(currentIndexModal - 1);
+    }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndexModal < galleryImages.length - 1) {
+        openModal(currentIndexModal + 1);
+    }
+});
+
+// Keyboard navigation (Arrow keys)
+document.addEventListener('keydown', (event) => {
+    if (document.getElementById('modal').classList.contains('show')) { // Only listen if modal is open
+        if (event.key === 'ArrowLeft') { // Left arrow key for previous
+            if (currentIndexModal > 0) {
+                openModal(currentIndexModal - 1);
+            }
+        } else if (event.key === 'ArrowRight') { // Right arrow key for next
+            if (currentIndexModal < galleryImages.length - 1) {
+                openModal(currentIndexModal + 1);
+            }
+        }
+    }
+});
+
+        </script> 
+</body>
+</html>
