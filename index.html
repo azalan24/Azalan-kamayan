@@ -44,7 +44,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Boxicons for icons -->
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/fav-icon.png"/>
@@ -55,6 +57,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    
     <!-- Styles -->
     <style>
         html{
@@ -347,7 +352,7 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
     margin-top: -20px;
    margin-bottom: -150px;
     align-items: center;
-     font-size: clamp(0.5rem, 2vw, 0.8rem);
+     font-size: clamp(0.3rem, 2vw, 0.6rem);
  }
  .home-content h4{
     margin-left: auto; /* Center horizontally */
@@ -580,7 +585,37 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
   #scrollUpBtn:hover {
     background-color: #006400; /* Slightly lighter green on hover */
   }
-  
+  /* Style for search results */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+/* Style for each search result item */
+.search-result {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.search-result:hover {
+    background-color: #f1f1f1;
+}
+/* Style for no result found message */
+.no-result-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 5px;
+    text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -599,18 +634,22 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
               <li><a href="#our-story">About</a></li>
               <li><a href="menuwithheader.html" target="_blank">Menu</a></li>
               <li><a href="#gallery">Gallery</a></li>
-              <li><a href="reservation.html">Reservation</a></li>
+              <li><a href="#ReserveNow">Reservation</a></li>
                
                 <!-- Search bar inside navbar -->
                 <li class="search-bar-container">
                     <button class="search-btn" onclick="toggleSearch()">
                         <i class="bx bx-search"></i>
                     </button>
-                    <input type="text" placeholder="Search..." class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-bar" id="searchInput" oninput="checkSearchResults()">
+                    <!-- No results found message -->
+                    <div id="no-result" class="no-result-message" style="display: none;">
+                        No result found
+                    </div>
                 </li>
                 
 <!-- View Menu Button -->
-<button class="view-menu-btn" onclick="window.location.href='https://azalankamayan.site#Contacts'">Contact Us</button>
+<button class="view-menu-btn" onclick="window.location.href='#menu'">Contact Us</button>
                 
             </ul>
         </div>
@@ -623,15 +662,15 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
             <h1>Savor the flavor of the tradition </h1>
             <h4>Indulge in the rich flavors of Filipino cuisine, expertly grilled to perfection. From succulent meats to savory seafood, every bite is a testament to our culinary heritage. Join us and experience the heart of Roxas City’s dining scene.</h4>
             
-            <a href="reservation.html" class="reserve-btn">Reserve Now</a><br><br>
+            <a href="#reservation" class="reserve-btn">Reserve Now</a><br><br>
             <h6>OPERATING HOURS</h6>
-                <p>Monday-Sunday: 10:00 AM-10:00 PM</p>
-                
+                <p>Sunday-Thursday: 10 am-9:00pm<br>
+                Sunday-Thursday: 10 am-9:00pmz<p>
             
         </div>
         
     </section> <section class="featured-dishes">
-      <h3>Our Featured Dishes</h3>
+      <h1>Our Featured Dishes</h1>
       <p>Savor the rich flavors of Filipino cuisine, share delicious dishes with friends and family, and make lasting memories around the table. Join us at Azalan Kamayan Restaurant for an unforgettable dining experience.</p>
       <div class="dishes-container">
           <div class="dish">
@@ -647,7 +686,7 @@ transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
               <div class="dish-content">
                   <h3>Pinakbet</h3>
                   <p>Native vegetables, and pork</p>
-               
+                 
               </div>
           </div>
           <div class="dish">
@@ -707,7 +746,7 @@ loading="lazy">
     </section>
   
     
-     <div id="gallery"class="container">
+      <div class="container">
         <h1>Our Gallery</h1>
         <p class="subtitle">Explore our beautiful restaurant and the wonderful moments shared with our guests.</p>
 
@@ -917,7 +956,7 @@ loading="lazy">
           <form name="contact" method="POST" data-netlify="true">
               <!-- Hidden fields -->
               <input type="hidden" name="form-name" value="contact">
-              <input type="hidden" name="_next" value="https://azalankamayan.site/thank-you.html">
+              <input type="hidden" name="_next" value="https://azalankamayan.site/thankyou.html">
 
           
               <div class="input-group">
@@ -994,7 +1033,7 @@ loading="lazy">
           <li><a href="#our-story">Our Story</a></li>
           <li><a href="menuwithheader.html" target="_blank">Menu</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="reservation.html">Reservation</a></li>
+          <li><a href="#ReserveNow">Reservation</a></li>
         </ul>
       </div>
 
@@ -1237,7 +1276,39 @@ document.addEventListener('keydown', (event) => {
         window.location.href = "https://azalankamayan.site/thank-you.html";
       })
       .catch((error) => console.error("Error:", error));
-  }
-        </script> 
+  }const menuItems = [
+  "Grilled Chicken",
+  "Kamayan Platter",
+  "Sinigang na Baboy",
+  "Lechon Kawali",
+  "Adobo",
+  "Pancit Malabon",
+  "Lumpia Shanghai"
+];
+    // Sample data for the search results
+const sampleData = [
+"Home",
+"About",
+"Menu",
+"Gallery",
+"Reservation",
+"Contact Us"
+];
+
+function checkSearchResults() {
+const searchInput = document.getElementById('searchInput').value.toLowerCase();
+const noResultMessage = document.getElementById('no-result');
+
+// Check if there's any match in the sample data
+const matchedResults = sampleData.filter(item => item.toLowerCase().includes(searchInput));
+
+// If no match, display the "No result found" message
+if (matchedResults.length === 0 && searchInput.length > 0) {
+    noResultMessage.style.display = 'block';
+} else {
+    noResultMessage.style.display = 'none';
+}
+}
+</script> 
 </body>
 </html>
