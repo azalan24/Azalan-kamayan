@@ -4,7 +4,7 @@
    
 }
 
-.featured-dishes h1 {
+.featured-dishes h3 {
     font-size: 2em;
     color: #333;
 }
@@ -12,6 +12,7 @@
 .featured-dishes p {
     font-size: 1rem;
     color: #555;
+    background-color: aliceblue;
     margin: 10px 0 40px;
     max-width: 950px;
     margin-left: auto;
@@ -27,7 +28,7 @@
 
 .dish {
     background-color: #fff;
-    border-radius: 10px;
+   
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
@@ -64,22 +65,7 @@
 }
 
 /* Adjust the menu button placement */
-.menu-button {
-    display: inline-block;
-    margin-top: 20px; /* Space between the description and the button */
-    padding: 10px 20px;
-    text-align: center;
-    background-color:  #0c922b;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
 
-.menu-button:hover {
-    background-color:  #068724;
-}
 
 @media (max-width: 768px) {
     .featured-dishes h1 {
